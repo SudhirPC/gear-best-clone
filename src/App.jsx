@@ -3,14 +3,17 @@ import './App.css';
 import { Footer } from './Components/Footer.jsx';
 import { Navbar } from './Components/Navbar.jsx';
 import { FrontPage } from './Components/FrontPage.jsx';
+import { ProductPage } from './Components/ProductPageDetails.jsx';
 
 
 function App() {
   return (
     <div >
       <Navbar/>
-      <FrontPage/>
+      <ProductPage/>
+      {/* <FrontPage/> */}
      {/* <Footer/> */}
+
     </div>
   );
 }
