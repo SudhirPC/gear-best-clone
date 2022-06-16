@@ -1,68 +1,5 @@
 {
-  "frontCollection": [
-    {
-      "id": 1,
-      "image": "https://gloimg.gbtcdn.com/soa/gb/store/6507287161137004544/16430/goods_thumb_220-v3/e7514f266988.jpg"
-      
-    },
-    {
-      "id": 2,
-      "image": "https://gloimg.gbtcdn.com/soa/gb/item/6878402251153666048/16519/goods_thumb_220-v1/e9c161b9300d.jpg"
-    },
-    {
-      "id": 3,
-      "image": "https://gloimg.gbtcdn.com/soa/gb/item/6900746726869757952/16492/goods_thumb_220-v3/0331f75f74f0.jpg"
-      
-    },
-    {
-      "id": 4,
-      "image": "https://gloimg.gbtcdn.com/soa/gb/item/6878399324569661440/16517/goods_thumb_220-v1/a00cb9f65d8f.jpg"
-     
-    },
-    {
-      "id":5,
-      "image": ""
-     
-    }
-  ],
-  "frontSuperDeals": [
-    {
-      "id": 1,
-      "image": "https://gloimg.gbtcdn.com/soa/gb/item/6870745450383863808/16538/goods_thumb_220-v1/1d662f23ff41.jpg",
-      "title":"Samebike LO26 II Smart Folding 26 Inch Electric Moped Bike 500W Motor 10Ah Battery Max 35km/h SHIMANO 21 Gear Pure electric mode 35-40km Max range - Black EU",
-      "price":899.00,
-      "strikethroughPrice":"1399"
-    },
-    {
-      "id": 2,
-      "image": "https://gloimg.gbtcdn.com/soa/gb/item/6883820374342168576/16499/goods_thumb_220-v5/6233d35f6f8a.jpg",
-      "title":"Global Version MI 11 Ultra 6.3 inch Smartphone 12Gb Cell Phone Unlocked 2022 5G Mobile Phones Cheap Android Xaiomi Telephone Xiomi - Black 8G 256GB",
-      "price":98.50,
-      "strikethroughPrice":206.50
-    },
-    {
-      "id": 3,
-      "image": "https://gloimg.gbtcdn.com/soa/gb/item/6878391336429613056/16424/goods_thumb_220-v1/186cd6966d5f.jpg",
-      "title":"Xiaomi Mi Intelligent Remote Control Car SUZUKI JIMNY 4 Generation Electric Race Car 4 Wheels Drive Rock Crawler App Controller - Green",
-      "price":51.99,
-      "strikethroughPrice":62.94
-    },
-    {
-      "id": 4,
-      "image": "https://gloimg.gbtcdn.com/soa/gb/item/6899301501118902272/16486/goods_img_big-v1/6a0fbd723c9d.jpg",
-      "title":"Xiaomi Redmi AX5400 Router 16M RGB WiFi6 512M Memory Enhanced 4x4 160MHz 4K-QAM 2.5G Dual WAN / LAN - Add EU Plug",
-      "price":134.99,
-      "strikethroughPrice":145.88
-    },
-    {
-      "id":5,
-      "image": "https://gloimg.gbtcdn.com/soa/gb/item/6878024886355423232/16459/goods_img_big-v1/f88842132727.jpg",
-      "title":"OUKITEL WP5 4G Rugged SmartPhone Quad Core 4GB 32GB 8000mAh Mobile Phone 5.5 Inch Waterproof MT6761 Triple Camera Phone - Black 4GB 32GB EU or Russian Area China",
-      "price":177.00,
-      "strikethroughPrice":499.99
-     
-    }
-  ],
+ 
   "frontNew": [
     
     {
@@ -479,8 +416,123 @@
   "watches": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "image":"https://gloimg.gbtcdn.com/soa/gb/item/6615272824267153408/15977/goods_thumb_220-v3/c4539122a15e.jpg",
+      "brand":"huawei",
+      "price":"95.99",
+      "title":"HUAWEI WATCH GT Elegant Edition Smart Sport Watch...",
+      "gender":"female"
+    },
+    {
+      "id": 2,
+      "image":"https://gloimg.gbtcdn.com/soa/gb/item/6882688590640508928/16425/goods_thumb_220-v1/c8bf329a8b8c.jpg",
+      "brand":"x3",
+      "price":"47.56",
+      "title":"X3 Dynamic ECG PPG HRV SPO2 Monitoring Smart Watch...",
+      "gender":"male"
+    },
+    {
+      "id": 3,
+      "image":"https://gloimg.gbtcdn.com/soa/gb/item/6899301501118902272/16551/goods_thumb_220-v3/40f8bb52b951.jpg",
+      "brand":"xiomi",
+      "price":"47.99",
+      "title":"Original Xiaomi Mi Band 7 / 7 NFC Smart Wristband...",
+      "gender":"male"
+    },
+    {
+      "id": 4,
+      "image":"https://gloimg.gbtcdn.com/soa/gb/item/6901174613791928320/16490/goods_thumb_220-v1/31e68be1f325.jpg",
+      "brand":"ws7",
+      "price":"21.68",
+      "title":"New WS7 Pro Smart Mens Ladies Custom Dial Sports...",
+      "gender":"female"
+    },
+    {
+      "id": 5,
+      "image":"https://gloimg.gbtcdn.com/soa/gb/item/6878030535709618176/16535/goods_thumb_220-v1/d175e8cd833d.jpg",
+      "brand":"apple",
+      "price":"13.99",
+      "title":"W26+ 1.75 inch Smart Watch Bluetooth Call Heart Rate...",
+      "gender":"female"
+    },
+    {
+      "id": 6,
+      "image":"https://gloimg.gbtcdn.com/soa/gb/item/6615272824267153408/15948/goods_thumb_220-v15/6b5f5541e1c9.jpg",
+      "brand":"xiomi",
+      "price":"45.99",
+      "title":"Mi Band 5 Smart Bracelet 4 Color AMOLED Screen Miband...",
+      "gender":"female"
+    },
+    {
+      "id": 7,
+      "image":"https://gloimg.gbtcdn.com/soa/gb/item/6878388619120406528/16535/goods_thumb_220-v1/d5d6d5b82d5f.jpg",
+      "brand":"xiomi",
+      "price":"47.99",
+      "title":"Xiaomi Mi Band 7 Smart Bracelet 6 Color AMOLED...",
+      "gender":"female"
+    },
+    {
+      "id": 8,
+      "image":"https://gloimg.gbtcdn.com/soa/gb/item/6878028664286670848/16501/goods_thumb_220-v1/3f611e27287f.jpg",
+      "brand":"ws7",
+      "price":"21.68",
+      "title":"New WS7 Pro Smart Mens Ladies AMOLED Screen GPS 5ATM...",
+      "gender":"female"
+    },
+    {
+      "id": 9,
+      "image":"https://gloimg.gbtcdn.com/soa/gb/item/6882688590640508928/16425/goods_thumb_220-v1/c8bf329a8b8c.jpg",
+      "brand":"x3",
+      "price":"47.56",
+      "title":"X3 Dynamic ECG PPG HRV SPO2 Monitoring Smart Watch...",
+      "gender":"male"
+    },
+    {
+      "id": 10,
+      "image":"https://gloimg.gbtcdn.com/soa/gb/item/6615272824267153408/16116/goods_thumb_220-v3/e51b95809246.jpg",
+      "brand":"xiomi",
+      "price":"141.99",
+      "title":"Xiaomi Mi Watch Blood Oxygen GPS SmartWatch...",
+      "gender":"male"
+    },
+    {
+      "id": 11,
+      "image":"https://gloimg.gbtcdn.com/soa/gb/item/6878402251153666048/16417/goods_thumb_220-v3/21ff9307e5ee.jpg",
+      "brand":"ws7",
+      "price":"121.68",
+      "title":"New WS7 Pro Smart Mens Ladies Custom Dial Sports...",
+      "gender":"male"
+    },
+    {
+      "id": 12,
+      "image":"https://gloimg.gbtcdn.com/soa/gb/item/6878030535709618176/16535/goods_thumb_220-v1/3a23f2d3c7d5.jpg",
+      "brand":"huawei",
+      "price":"65.99",
+      "title":"HUAWEI WATCH GT Elegant Edition Smart Sport Watch...",
+      "gender":"female"
+    },
+    {
+      "id": 13,
+      "image":"https://gloimg.gbtcdn.com/soa/gb/item/6615272824267153408/16116/goods_thumb_220-v3/e51b95809246.jpg",
+      "brand":"x3",
+      "price":"97.56",
+      "title":"X3  Watch Blood Oxygen GPS SmartWatch...",
+      "gender":"male"
+    },
+    {
+      "id": 14,
+      "image":"https://gloimg.gbtcdn.com/soa/gb/item/6878391336429613056/16414/goods_thumb_220-v1/e1c76b337a79.jpg",
+      "brand":"xiomi",
+      "price":"87.99",
+      "title":"Original Xiaomi Mi Band 6 / 6 NFC Smart Wristband...",
+      "gender":"male"
+    },
+    {
+      "id": 15,
+      "image":"https://gloimg.gbtcdn.com/soa/gb/item/6878030535709618176/16528/goods_thumb_220-v1/b59d7951b05c.jpg",
+      "brand":"apple",
+      "price":"241.68",
+      "title":"Apple  Smart Fitness Sports Clock Waterproof Watch Heart...",
+      "gender":"female"
     }
   ]
  

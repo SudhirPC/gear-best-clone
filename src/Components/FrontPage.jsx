@@ -119,7 +119,7 @@ export const FrontPage = () => {
      
     <div  className=" ml-16 mt-10 mb-4">
       <div className="flex">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 " viewBox="0 0 20 20" fill="currentColor">
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 " viewBox="0 0 20 20" fill="currentColor">
       <path fillRule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clipRule="evenodd" />
     </svg>
         <h1 className="text-2xl font-bold">COLLECTION</h1>
@@ -142,6 +142,52 @@ export const FrontPage = () => {
         </div>
         <div className="shadow-2xl">
         <img className="w-44 h-56"  src="https://gloimg.gbtcdn.com/soa/gb/item/6899292126182567936/16463/goods_thumb_220-v1/fa2088fa6aaa.jpg" alt="" />
+        </div>
+        </div>
+    </div>
+
+    {/* super deals images */}
+     
+    <div  className=" ml-16 mt-10 mb-8">
+      <div className="flex">
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mt-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 8h6m-5 0a3 3 0 110 6H9l3 3m-3-6h6m6 1a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+        <h1 className="text-2xl font-bold">SUPER DEALS</h1>
+      </div>
+      <div className="flex mt-4">
+        <div className="shadow-2xl w-44 mr-4">
+        <img className="w-44 h-full mr-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFCTiS5QTWY181AmAXofxlHop3DL4aXWXwPQ&usqp=CAU" alt="" />
+        </div>
+        <div className="shadow-2xl w-44 mr-4 p-2">
+          <img className="w-44 h-56 mr-4" src="https://gloimg.gbtcdn.com/soa/gb/item/6870745450383863808/16538/goods_thumb_220-v1/1d662f23ff41.jpg" alt="" />
+          <p>Samebike LO26 Smart Folding 26 Inch Electric...</p>
+          <p className="line-through">RRP:1399</p>
+          <p className="text-pink-700">$ 899.00</p>
+        </div>
+        <div className="shadow-2xl mr-4 w-44 p-2">
+          <img className="w-44 h-56 mr-4"  src="https://gloimg.gbtcdn.com/soa/gb/item/6883820374342168576/16499/goods_thumb_220-v5/6233d35f6f8a.jpg" alt="" />
+          <p>Global Version MI 11 Ultra 6.3 inch Smart phone 12Gb Cell...</p>
+          <p className="line-through">RRP:1399</p>
+          <p className="text-pink-700">$ 899.00</p>
+        </div>
+        <div className="shadow-2xl w-44 mr-4 p-2">
+        <img className="w-44 h-56 mr-4"  src="https://gloimg.gbtcdn.com/soa/gb/item/6878391336429613056/16424/goods_thumb_220-v1/186cd6966d5f.jpg" alt="" />
+        <p>Xiaomi Mi Intelligent Remote Control Car SUZUKI JIMNY 4...</p>
+          <p className="line-through">RRP:62.94</p>
+          <p className="text-pink-700">$ 51.99</p>
+        </div>
+        <div className="shadow-2xl w-44 mr-4 p-2">
+        <img className="w-44 h-56 mr-4"  src="https://gloimg.gbtcdn.com/soa/gb/item/6899301501118902272/16486/goods_img_big-v1/6a0fbd723c9d.jpg" alt="" />
+        <p>Xiaomi Redmi AX5400 Router 16M RGB WiFi6 512M Mem...</p>
+          <p className="line-through">RRP:145.88</p>
+          <p className="text-pink-700">$ 134.99</p>
+        </div>
+        <div className="shadow-2xl w-44 mr-4 p-2">
+        <img className="w-44 h-56"  src="https://gloimg.gbtcdn.com/soa/gb/item/6878024886355423232/16459/goods_img_big-v1/f88842132727.jpg" alt="" />
+        <p>Xiaomi Redmi AX5400 Router 16M RGB WiFi6 512M Mem...</p>
+          <p className="line-through">RRP:499.99</p>
+          <p className="text-pink-700">$ 177.00</p>
         </div>
         </div>
     </div>
