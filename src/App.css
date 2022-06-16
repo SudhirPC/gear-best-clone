@@ -1,0 +1,187 @@
+ .App {
+  text-align: center;
+  padding:0 5%
+}
+/* -------------------Footer--------------------- */
+.footer1>p:hover{
+  cursor: pointer;
+}
+.footerUpper{
+  display: flex;
+  width:100%;
+  background-color:white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+} 
+.footerUpper>div{
+  width:17%;
+  padding-right: 2%;
+  
+}
+.icon-footer{
+  width:150px;
+  height:125px
+}
+.mediumUpper{
+  display: flex;
+  width:100%;
+  margin-top: 50px;
+}
+.input-div{
+  display: flex;
+  margin-right: 30%;
+  margin-left: 2%;
+}
+.input-div>input{
+  width:200px;
+  height:30px;
+  margin-left:15px;
+  margin-top: 15px;
+}
+.input-div>button{
+  height:37px;
+  color:white;
+  padding:5px;
+  margin-top: 15px;
+  background-color:black
+}
+.facebook{
+  background-color:grey
+}
+.facebook:hover .facebook-svg{
+color: white;
+
+}
+.facebook:hover {
+ background-color: rgb(37, 87, 160);
+}
+.twitter{
+  background-color:grey
+}
+.twitter:hover .twitter-svg{
+color: white;
+
+}
+.twitter:hover {
+ background-color: rgb(29,161,242);
+}
+
+.google{
+  background-color:grey
+}
+.google:hover .google-svg{
+color: white;
+
+}
+.google:hover {
+ background-color: rgb(190, 54, 23);
+}
+.instagram{
+  background-color:grey
+}
+.instagram:hover .instagram-svg{
+color: white;
+
+}
+.instagram:hover {
+ background-color: rgb(179, 38, 115);
+}
+.linkedin{
+  background-color:grey
+}
+.linkedin:hover .linkedin-svg{
+color: white;
+
+}
+.linkedin:hover {
+ background-color: rgb(19, 36, 118);
+}
+.github{
+  background-color:grey
+}
+.github:hover .github-svg{
+color: white;
+
+}
+.github:hover {
+ background-color: rgb(3, 14, 21);
+}
+.companylogo>img{
+margin-right: 25px;
+}
+.footerh4:hover{
+cursor: pointer;
+  color:rgb(174, 136, 32)
+}
+.cursor{
+  cursor: pointer;
+}
+
+/* --------------------navbar----------------- */
+.navbar{
+  width: 90%;
+  margin:auto;
+}
+.dropdown:hover .dropdown-menu {
+  margin-top: 50px;
+  height:100%;
+  display: block;
+  background-color: white;
+}
+
+/* .countrydropdown:hover .countrydropdown-menu {
+  display: block;
+} */
+
+
+/* ---------slidercss front page ------------ */
+.mainbodyupper{
+  width:90%;
+  margin:auto;
+  height:360px;
+  display:flex;
+}
+.leftuppermain{
+  background-color:rgb(175, 162, 162);
+  width:20%;
+
+}
+.swiperdivmain {
+  width: 80%;
+  height: 100%;
+}
+
+.swiper-slide {
+
+  font-size: 18px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+.col{
+  height:360px;
+  width: 100%;
+ 
+}
+
