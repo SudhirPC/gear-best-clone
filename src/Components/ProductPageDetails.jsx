@@ -1,6 +1,6 @@
 import React from "react";
 
-export const ProductPage = () => {
+export const ProductPageDetails = () => {
   return (
     <div className="ml-16">
       <div className="flex "> 
