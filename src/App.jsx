@@ -7,6 +7,7 @@ import { ProductPageDetails } from './Components/ProductPageDetails.jsx';
 import { ProductPage } from './Components/ProductPage.jsx';
 import { Login } from './Components/Login.jsx';
 import { Register } from './Components/Register.jsx';
+import { CheckoutPage } from './Components/CheckoutPage.jsx';
 
 
 function App() {
@@ -14,11 +15,12 @@ function App() {
     <div >
       <Navbar/>
       {/* <Login/> */}
-      <Register/>
+      {/* <Register/> */}
       {/* <ProductPage/> */}
       {/* <FrontPage/> */}
      {/* <Footer/> */}
 {/* <ProductPage/> */}
+<CheckoutPage/>
     </div>
   );
 }
