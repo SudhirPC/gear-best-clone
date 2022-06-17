@@ -4,7 +4,7 @@ export const Footer = () => {
   return (
     //---------------------------- upper footer div---------------
     <div className="m-auto mt-4 ">
-      <div className="flex w-11/12 ml-8 pt-8 bg-white shadow ml-10">
+      <div className="flex w-11/12 ml-8 pt-8 bg-white shadow ">
         <div className="w-1/5 ml-8 mr-10">
           <img src="https://css.gbtcdn.com/imagecache/gbw/img/site/new-logo.png" />
           <h4  style={{ marginTop: "10px", marginLeft: "15px" }}>

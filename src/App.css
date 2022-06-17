@@ -200,3 +200,12 @@ cursor: pointer;
 .recommendOne>p{
   cursor: pointer;
 }
+
+.watchdiv:hover{
+  height:102%;
+  width:102%;
+  cursor: pointer;
+  }
+  .watchdiv>p{
+    cursor: pointer;
+  }

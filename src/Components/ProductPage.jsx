@@ -1,6 +1,23 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
+import axios from "axios"
 export const ProductPage = () => {
+    const [watch, setWatch] = useState([]);
+  const getWatch = () => {
+    axios
+      .get("http://localhost:8080/watches")
+      .then((res) => {
+        console.log(res.data);
+        setWatch(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  useEffect(() => {
+    getWatch();
+  }, []);
+
+  console.log("watch", watch)
   return (
     <div className="flex">
       {/* left side baar  */}
@@ -223,12 +240,12 @@ export const ProductPage = () => {
           </div>
 
           {/* {products to be  append watches } */}
-          {/* <div className="w-11/12 ml-16 h-full">
-        <div className="grid grid-cols-5 grid-rows-6 shadow-2xl">
-          {data.map((e) => {
+          <div className="w-11/12 ml-4 mt-8 h-full">
+        <div className="grid grid-cols-3 grid-rows-5  shadow-2xl">
+          {watch.map((e) => {
             return (
               <div
-                className="w-full h-80 border-2  recommendOne"
+                className="w-full m-2 h-80 border watchdiv"
                 style={{ marginRight: "2px" }}
               >
                 <div className=" mb-1">
@@ -244,7 +261,7 @@ export const ProductPage = () => {
             );
           })}
         </div>
-      </div> */}
+      </div> 
         </div>
       </div>
     </div>
