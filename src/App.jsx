@@ -18,11 +18,11 @@ function App() {
       {/* <Login/> */}
       {/* <Register/> */}
       {/* <ProductPage/> */}
-      {/* <FrontPage/> */}
+      <FrontPage/>
      {/* <Footer/> */}
-{/* <ProductPage/> */}
-{/* <CheckoutPage/> */}
-<CartPage/>
+      {/* <ProductPage/> */}
+      {/* <CheckoutPage/> */}
+      {/* <CartPage/> */}
     </div>
   );
 }

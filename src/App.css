@@ -190,3 +190,12 @@ cursor: pointer;
   display: block;
  
 }
+
+.recommendOne:hover{
+height:105%;
+width:105%;
+cursor: pointer;
+}
+.recommendOne>p{
+  cursor: pointer;
+}
