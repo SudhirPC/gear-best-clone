@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, {useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -6,6 +6,17 @@ import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 
 export const FrontPage = () => {
+  const [electronics, setSElectronics] = useState(false);
+
+  const handleToggle = () => {
+    if (electronics) {
+      setSElectronics(false);
+    } else {
+      setSElectronics(true);
+    }
+
+    console.log(electronics);
+  };
   return (
     <div >
       <div className="mainbodyupper">
@@ -194,3 +205,65 @@ export const FrontPage = () => {
     </div>
   )
 }
+{/* <div className={electronics ? "block" : "hidden"}>
+<div className="w-2/3">
+  <div className="flex mt-4">
+    <div>
+      <p className="text-xl font-semibold">Smart Electronics</p>
+      <p>Smart Watches</p>
+      <p>Smart Watche Phone</p>
+      <p>Smart Wristband</p>
+      <p>Smart Accessories</p>
+      <p>Sport Watch</p>
+      <p>Smart Health Watch</p>
+    </div>
+    <div>
+    <p className="text-xl font-semibold">Headphones & Electronics</p>
+      <p>Bluetooth Headphones </p>
+      <p>Earbud Headphones</p>
+      <p>Gaming  Headphones</p>
+      <p>On-Ear & Over-Ear Headphones</p>
+      <p>Sport & Fitness Headphones</p>
+      <p>Headphones Accessories </p>
+    </div>
+    <div>
+    <p className="text-xl font-semibold">Hot Brands</p>
+     <p>Kospet</p>
+     <p>Lenovo</p>
+     <p>CORN</p>
+     <p>KZ</p>
+     <p>TicWatch</p>
+     <p>Gocomma</p>
+    </div>
+  </div>
+  <div className="flex mt-8">
+  <div>
+      <p className="text-xl font-semibold">Security & Protection</p>
+      <p>Access Control </p>
+      <p>Alarm Systems</p>
+      <p>Door Interncom</p>
+      <p>IP Cameras</p>
+      <p>Smart Doorbells</p>
+      <p>Surveillance Camera Systems</p>
+    </div>
+    <div>
+    <p className="text-xl font-semibold">Xiomi Ecosystem Products</p>
+      <p>Xiomi</p>
+      <p>Amazefit</p>
+      <p>Huawei</p>
+      <p>Apple</p>
+      <p>Aqara</p>
+      <p>QCY</p>
+    </div>
+    <div>
+    <p className="text-xl font-semibold">Other Customer Electronics</p>
+     <p>Smart Home</p>
+     <p>Action Cameras & DV Accessories</p>
+     <p>Gimbal</p>
+     <p>Video Games</p>
+     <p>Speakers</p>
+     <p>Microphone</p>
+    </div>
+  </div>
+</div>
+</div> */}
