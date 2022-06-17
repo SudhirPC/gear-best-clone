@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import {Link} from "react-router-dom"
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
@@ -40,7 +41,7 @@ export const FrontPage = () => {
     <div>
       <div className="mainbodyupper">
         <div className="leftuppermain">
-          <div className=" pl-4 hover:bg-gray-100">Consumer Electronics</div>
+         <Link to="/productpage"><div className=" pl-4 hover:bg-gray-100">Smart Watches</div></Link>
           <div className=" pl-4 hover:bg-gray-100">Consumer Electronics</div>
           <div className=" pl-4 hover:bg-gray-100">Industrial & Scientific</div>
           <div className=" pl-4 hover:bg-gray-100">

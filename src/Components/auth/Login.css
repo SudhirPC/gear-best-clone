@@ -7,6 +7,9 @@
     padding: 1rem;
     align-items: center;
     text-align: center;
+    margin-left: 40%;
+    margin-top:2%
+
 }
 
 .login > input {

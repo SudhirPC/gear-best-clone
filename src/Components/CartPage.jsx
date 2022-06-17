@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from "react-router-dom"
 
 export const CartPage = () => {
   return (
@@ -21,6 +22,9 @@ export const CartPage = () => {
             <div className="w-2/5 p-2 pl-4 ml-6 mt-8">
                 <button className="ml-20 ">Delete</button>
             </div>
+        </div>
+        <div>
+           <Link to="/checkout"><button className="p-2 pl-4 pr-4 bg-yellow-600 h-12 w-32">CheckOut</button></Link>
         </div>
     </div>
   )

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import {Link} from "react-router-dom"
 export const Navbar = () => {
   const [visible, setVisible] = useState(false);
 
@@ -16,11 +16,11 @@ export const Navbar = () => {
     <div className="navbar">
       <div className="flex">
         <div className="w-1/5 p-4 ">
-          <img
+       <Link to="/"><img
             className="h-20"
             src="https://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png"
             alt=""
-          />
+          /></Link> 
         </div>
         <div className="w">
           <div className=" flex ml-72 pt-4 mb-4">
@@ -256,7 +256,7 @@ export const Navbar = () => {
                   />
                 </svg>
               </div>
-              <p className=" mt-2">Sign In</p>
+              <Link to="/register"><p className=" mt-2">Sign In</p></Link>
             </div>
             <div className="ml-8 mt-2 flex">
               <div>
@@ -277,7 +277,7 @@ export const Navbar = () => {
               </div>
               <p>Favorites</p>
             </div>
-            <div className="ml-8 mt-2 flex">
+          <Link to="/cart"><div className="ml-8 mt-2 flex">
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -295,7 +295,7 @@ export const Navbar = () => {
                 </svg>
               </div>
               <p>Cart</p>
-            </div>
+            </div></Link>  
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import "./Login.css"
 import axios from "axios"
-
+import {Link} from "react-router-dom"
 
 export const Login = ({ setLoginUser}) => {
 
@@ -33,12 +33,12 @@ export const Login = ({ setLoginUser}) => {
     return (
         <div className="login">
             {console.log(user)}
-            <h1>Login</h1>
+            <h1 className="text-2xl font-semibold">Login</h1>
             <input type="text" name="email" value={user.email} onChange={handleChange} placeholder="Enter your Email"></input>
             <input type="password" name="password" value={user.password} onChange={handleChange}  placeholder="Enter your Password" ></input>
-            <div className="button" onClick={login}>Login</div>
+          <Link to="/">  <div className="pl-8 pr-8 bg-blue-500 h-10 rounded-md text-white pt-2 text-xl" onClick={login}>Login</div></Link>
             <div>or</div>
-            <div className="button" >Register</div>
+            <Link to="/register"> <div className="pl-8 pr-8 bg-blue-500  h-10 rounded-md text-white pt-2 text-xl">Register</div> </Link>
         </div>
     )
 }

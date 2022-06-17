@@ -17,24 +17,16 @@ function App() {
   return (
     <div >
       <Navbar/>
-     {/* <Login/>  */}
-    {/* <Register/> */}
-      {/* <ProductPageDetails/> */}
-      {/* <FrontPage/> */}
-     {/* <Footer/> */}
-      {/* <ProductPage/> */}
-      <CheckoutPage/>
-      {/* <CartPage/> */}
-
       <Routes>
-        <Route path="/" elements={ <FrontPage/>} />
-        <Route path="/login" elements={ <Login/>}  />
-        <Route path="/register" elements={ <Register/> } />
-        <Route path="/productpage" elements={ <ProductPage/>} />
-        <Route path="/productdetail" elements={ <ProductPageDetails/> }/>
-        <Route path="/cart" elements={ <CartPage/>}/>
-        <Route path="/checkout" elements={ <CheckoutPage/>}/>
+        <Route path="/" element={ <FrontPage/>} />
+        <Route path="/login" element={ <Login/>}  />
+        <Route path="/register" element={ <Register/> } />
+        <Route path="/productpage" element={ <ProductPage/>} />
+        <Route path="/productdetail" element={ <ProductPageDetails/> }/>
+        <Route path="/cart" element={ <CartPage/>}/>
+        <Route path="/checkout" element={ <CheckoutPage/>}/>
       </Routes>
+       <Footer/>
     </div>
   );
 }
