@@ -8,6 +8,7 @@ import { ProductPage } from './Components/ProductPage.jsx';
 import { Login } from './Components/Login.jsx';
 import { Register } from './Components/Register.jsx';
 import { CheckoutPage } from './Components/CheckoutPage.jsx';
+import { CartPage } from './Components/CartPage.jsx';
 
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
       {/* <FrontPage/> */}
      {/* <Footer/> */}
 {/* <ProductPage/> */}
-<CheckoutPage/>
+{/* <CheckoutPage/> */}
+<CartPage/>
     </div>
   );
 }
