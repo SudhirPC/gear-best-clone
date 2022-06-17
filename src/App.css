@@ -178,6 +178,7 @@ cursor: pointer;
 .swiper {
   margin-left: auto;
   margin-right: auto;
+  z-index: 0;
 }
 .col{
   height:360px;
@@ -192,8 +193,8 @@ cursor: pointer;
 }
 
 .recommendOne:hover{
-height:105%;
-width:105%;
+height:102%;
+width:102%;
 cursor: pointer;
 }
 .recommendOne>p{

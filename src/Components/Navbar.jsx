@@ -41,7 +41,7 @@ export const Navbar = () => {
               </svg>
               <div className="bg-white">
                 <div className="bg-white">
-                  <div className="dropdown inline-block relative bg-white">
+                  <div className="dropdown inline-block relative  bg-white">
                     <p className=" font-small  bg-white rounded inline-flex ">
                       <span>
                         {" "}
@@ -55,9 +55,11 @@ export const Navbar = () => {
                         <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />{" "}
                       </svg>
                     </p>
-                    <ul className="dropdown-menu absolute z-10 bg-white hidden text-gray-700 w-80 h-60  p-9 pt-8 font-bold text-sm">
-                      <li className="mt-3">
-                        <h1 className="text-xl text-black bg-white">Download App!</h1>
+                    <ul className="dropdown-menu  absolute top-0 z-10 bg-white hidden text-gray-700 w-80 h-80 pl-16 font-bold text-sm">
+                      <li className="">
+                        <h1 className="text-xl text-black bg-white">
+                          Download App!
+                        </h1>
                       </li>
                       <li className="bg-white">
                         <p>Save $3 with App & New User Only</p>
@@ -95,29 +97,91 @@ export const Navbar = () => {
               <p>Language</p>
             </div>
             <div className="">
-          
-
-<div className="dropdown  relative flex">
-  <p className=" text-s  rounded flex items-center">
-    <span className="mr-1"><p>Country Website </p></span>
-    <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
-  </p>
-  <ul className="dropdown-menu absolute z-10 hidden text-gray-700 pt-1">
-    <li className=""><a className="rounded-t bg-white hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Global(English)</a></li>
-    <li className=""><a className="bg-white hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">France</a></li>
-    <li className=""><a className="rounded-b bg-white hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">España</a></li>
-     <li className=""><a className="rounded-t bg-white hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Россия</a></li>
-    <li className=""><a className="bg-white hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Portugal</a></li>
-    <li className=""><a className="rounded-b bg-white hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Italia</a></li>
-     <li className=""><a className="bg-white hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">India</a></li>
-    <li className=""><a className="rounded-b bg-white hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Deutschland</a></li>
-  </ul>
-</div>
+              <div className="dropdown  relative flex">
+                <p className=" text-s  rounded flex items-center">
+                  <span className="mr-1">
+                    <p>Country Website </p>
+                  </span>
+                  <svg
+                    className="fill-current h-4 w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />{" "}
+                  </svg>
+                </p>
+                <ul className="dropdown-menu absolute z-10 hidden text-gray-700 pt-1">
+                  <li className="">
+                    <a
+                      className="rounded-t bg-white hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                      href="#"
+                    >
+                      Global(English)
+                    </a>
+                  </li>
+                  <li className="">
+                    <a
+                      className="bg-white hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                      href="#"
+                    >
+                      France
+                    </a>
+                  </li>
+                  <li className="">
+                    <a
+                      className="rounded-b bg-white hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                      href="#"
+                    >
+                      España
+                    </a>
+                  </li>
+                  <li className="">
+                    <a
+                      className="rounded-t bg-white hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                      href="#"
+                    >
+                      Россия
+                    </a>
+                  </li>
+                  <li className="">
+                    <a
+                      className="bg-white hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                      href="#"
+                    >
+                      Portugal
+                    </a>
+                  </li>
+                  <li className="">
+                    <a
+                      className="rounded-b bg-white hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                      href="#"
+                    >
+                      Italia
+                    </a>
+                  </li>
+                  <li className="">
+                    <a
+                      className="bg-white hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                      href="#"
+                    >
+                      India
+                    </a>
+                  </li>
+                  <li className="">
+                    <a
+                      className="rounded-b bg-white hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                      href="#"
+                    >
+                      Deutschland
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
           <div className="flex">
             <div className=" flex ml-32 border-2 bg-yellow-500 border-yellow-500 w-6/12 rounded-2xl ">
-              <div className="w-12 flex">
+              <div className="w-12 flex relative">
                 <p className="m-1 pl-2 " onClick={handleToggle}>
                   All
                 </p>
@@ -134,7 +198,7 @@ export const Navbar = () => {
                   />
                 </svg>
                 <div className={visible ? "block" : "hidden"}>
-                  <div className="mt-10 h-56 w-40 overflow-y-auto  border absolute left-1/3">
+                  <div className="mt-10 h-96 w-40 overflow-y-auto  bg-white  border absolute left-1/3 z-10 ">
                     <p className="text-orange-500">All</p>
                     <p>MARKETPLACE</p>
                     <p> Gearbest Selection</p>

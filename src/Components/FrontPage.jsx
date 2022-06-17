@@ -10,24 +10,23 @@ export const FrontPage = () => {
   const [electronics, setSElectronics] = useState(false);
   const [data, setData] = useState([]);
 
-  const getData = () =>{
-
+  const getData = () => {
     axios
-    .get("http://localhost:8080/frontRecommend")
-    .then((res) => {
-      console.log(res.data);
-      
-      setData(res.data);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-  }
+      .get("http://localhost:8080/frontRecommend")
+      .then((res) => {
+        console.log(res.data);
 
-useEffect(() => {
-  getData()
-},[])
- 
+        setData(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   const handleToggle = () => {
     if (electronics) {
       setSElectronics(false);
@@ -65,7 +64,7 @@ useEffect(() => {
           <div className=" pl-4 hover:bg-gray-100">Watches & Jewelry</div>
           <div className=" pl-4 hover:bg-gray-100">Gearbest Promotion</div>
         </div>
-
+         
         <div className="swiperdivmain">
           <Swiper
             slidesPerView={1}
@@ -147,7 +146,7 @@ useEffect(() => {
               </div>
             </SwiperSlide>
           </Swiper>
-        </div>
+        </div> 
       </div>
       <div className="flex ml-16 mt-4">
         <div>
@@ -334,29 +333,44 @@ useEffect(() => {
 
       {/* Recommended image append */}
       <div className="flex mt-16 mb-4 ml-16">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
-      </svg>
-      <p className="font-bold text-xl ml-2">RECOMMENDED FOR YOU</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"
+          />
+        </svg>
+        <p className="font-bold text-xl ml-2">RECOMMENDED FOR YOU</p>
       </div>
-      
-      <div className="ml-16 h-full">
-      <div  className="grid grid-cols-5 grid-rows-6 shadow-2xl">
-        {data.map((e)=>{
-            return(
 
-              <div className="w-full h-80 border-2  recommendOne" style={{marginRight:"2px"}}>
-               <div className=" mb-1">
-               <img className="h-48 w-full" src={e.image}/>
-                <p className=" ml-2">{e.title}</p>
-                <p className="ml-4 text-pink-500 ">${e.price}</p>
-                <span className="ml-4 h-6 text-pink-700 pl-2 pr-2 ">{e.flashSale}</span>
-                <p className="">{e.shipFrom}</p>
-                </div> 
+      <div className="w-11/12 ml-16 h-full">
+        <div className="grid grid-cols-5 grid-rows-6 shadow-2xl">
+          {data.map((e) => {
+            return (
+              <div
+                className="w-full h-80 border-2  recommendOne"
+                style={{ marginRight: "2px" }}
+              >
+                <div className=" mb-1">
+                  <img className="h-48 w-full" src={e.image} />
+                  <p className=" ml-2">{e.title}</p>
+                  <p className="ml-4 text-pink-500 ">${e.price}</p>
+                  <span className="ml-4 h-6 text-pink-700 pl-2 pr-2 ">
+                    {e.flashSale}
+                  </span>
+                  <p className="">{e.shipFrom}</p>
+                </div>
               </div>
-            )
-        })}
-      </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
