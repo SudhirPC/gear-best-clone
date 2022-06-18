@@ -327,11 +327,14 @@ export const ProductPage = () => {
             </div>
             <div className="flex mt-4">
               <p className="">Sort By: </p>
+              <div className="flex ">
               <button onClick={()=>{setPrice("asc")}} className="bg-yellow-400 ml-2 p-2">Ascending</button>
-              <button onClick={()=>{setPrice("desc")}} className="bg-yellow-400 ml-8 p-2">Decending</button>
-            
-            <button onClick={()=>{setGender("male")}}>Male</button>
-            <button onClick={()=>{setGender("female")}}>Female</button>
+              <button onClick={()=>{setPrice("desc")}} className="bg-yellow-400 ml-6 p-2">Decending</button>
+              </div>
+              <div className="flex ">
+            <button className="bg-yellow-400 ml-6 p-2 pl-4" onClick={()=>{setGender("male")}}>Male</button>
+            <button className="bg-yellow-400 ml-6 p-2 pl-4" onClick={()=>{setGender("female")}}>Female</button>
+            </div>
             </div>
           </div>
 
