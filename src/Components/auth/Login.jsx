@@ -21,7 +21,7 @@ export const Login = ({ setLoginUser}) => {
     }
 
     const login = () => {
-        axios.post("http://localhost:1020/login", user)
+        axios.post("http://localhost:3750/login", user)
         .then(res => {
             console.log(res.data.user.name)
             alert(res.data.message)

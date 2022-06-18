@@ -72,7 +72,10 @@
       
     }
   ],
-  "frontRecommend": [
+
+
+  
+  "frontPage": [
     {
      
       "image": "https://gloimg.gbtcdn.com/soa/gb/item/6878391336429613056/16534/goods_img-v1/ed230b4b2700.jpg",
@@ -413,12 +416,15 @@
     }
     
   ],
+
+
+  
   "watches": [
     {
       
       "image":"https://gloimg.gbtcdn.com/soa/gb/item/6615272824267153408/15977/goods_thumb_220-v3/c4539122a15e.jpg",
       "brand":"huawei",
-      "price":"95.99",
+      "price":95.99,
       "title":"HUAWEI WATCH GT Elegant Edition Smart Sport Watch...",
       "gender":"female"
     },
@@ -426,7 +432,7 @@
       
       "image":"https://gloimg.gbtcdn.com/soa/gb/item/6882688590640508928/16425/goods_thumb_220-v1/c8bf329a8b8c.jpg",
       "brand":"x3",
-      "price":"47.56",
+      "price":47.56,
       "title":"X3 Dynamic ECG PPG HRV SPO2 Monitoring Smart Watch...",
       "gender":"male"
     },
@@ -434,7 +440,7 @@
       
       "image":"https://gloimg.gbtcdn.com/soa/gb/item/6899301501118902272/16551/goods_thumb_220-v3/40f8bb52b951.jpg",
       "brand":"xiomi",
-      "price":"47.99",
+      "price":47.99,
       "title":"Original Xiaomi Mi Band 7 / 7 NFC Smart Wristband...",
       "gender":"male"
     },
@@ -442,7 +448,7 @@
       
       "image":"https://gloimg.gbtcdn.com/soa/gb/item/6901174613791928320/16490/goods_thumb_220-v1/31e68be1f325.jpg",
       "brand":"Amazfit",
-      "price":"21.68",
+      "price":21.68,
       "title":"New Amazfit Pro Smart Mens Ladies Custom Dial Sports...",
       "gender":"female"
     },
@@ -450,7 +456,7 @@
       
       "image":"https://gloimg.gbtcdn.com/soa/gb/item/6878030535709618176/16535/goods_thumb_220-v1/d175e8cd833d.jpg",
       "brand":"apple",
-      "price":"13.99",
+      "price":13.99,
       "title":"W26+ 1.75 inch Smart Watch Bluetooth Call Heart Rate...",
       "gender":"female"
     },
@@ -458,7 +464,7 @@
       
       "image":"https://gloimg.gbtcdn.com/soa/gb/item/6615272824267153408/15948/goods_thumb_220-v15/6b5f5541e1c9.jpg",
       "brand":"xiomi",
-      "price":"45.99",
+      "price":45.99,
       "title":"Mi Band 5 Smart Bracelet 4 Color AMOLED Screen Miband...",
       "gender":"female"
     },
@@ -466,7 +472,7 @@
       
       "image":"https://gloimg.gbtcdn.com/soa/gb/item/6878388619120406528/16535/goods_thumb_220-v1/d5d6d5b82d5f.jpg",
       "brand":"xiomi",
-      "price":"47.99",
+      "price":47.99,
       "title":"Xiaomi Mi Band 7 Smart Bracelet 6 Color AMOLED...",
       "gender":"female"
     },
@@ -474,7 +480,7 @@
       
       "image":"https://gloimg.gbtcdn.com/soa/gb/item/6878028664286670848/16501/goods_thumb_220-v1/3f611e27287f.jpg",
       "brand":"Amazfit",
-      "price":"21.68",
+      "price":21.68,
       "title":"New WS7 Pro Smart Mens Ladies AMOLED Screen GPS 5ATM...",
       "gender":"female"
     },
@@ -482,7 +488,7 @@
       
       "image":"https://gloimg.gbtcdn.com/soa/gb/item/6882688590640508928/16425/goods_thumb_220-v1/c8bf329a8b8c.jpg",
       "brand":"x3",
-      "price":"47.56",
+      "price":47.56,
       "title":"X3 Dynamic ECG PPG HRV SPO2 Monitoring Smart Watch...",
       "gender":"male"
     },
@@ -490,7 +496,7 @@
       
       "image":"https://gloimg.gbtcdn.com/soa/gb/item/6615272824267153408/16116/goods_thumb_220-v3/e51b95809246.jpg",
       "brand":"xiomi",
-      "price":"141.99",
+      "price":141.99,
       "title":"Xiaomi Mi Watch Blood Oxygen GPS SmartWatch...",
       "gender":"male"
     },
@@ -498,7 +504,7 @@
       
       "image":"https://gloimg.gbtcdn.com/soa/gb/item/6878402251153666048/16417/goods_thumb_220-v3/21ff9307e5ee.jpg",
       "brand":"Amazfit",
-      "price":"121.68",
+      "price":121.68,
       "title":"New Amazfit Pro Smart Mens Ladies Custom Dial Sports...",
       "gender":"male"
     },
@@ -506,7 +512,7 @@
       
       "image":"https://gloimg.gbtcdn.com/soa/gb/item/6878030535709618176/16535/goods_thumb_220-v1/3a23f2d3c7d5.jpg",
       "brand":"huawei",
-      "price":"65.99",
+      "price":65.99,
       "title":"HUAWEI WATCH GT Elegant Edition Smart Sport Watch...",
       "gender":"female"
     },
@@ -514,7 +520,7 @@
       
       "image":"https://gloimg.gbtcdn.com/soa/gb/item/6615272824267153408/16116/goods_thumb_220-v3/e51b95809246.jpg",
       "brand":"x3",
-      "price":"97.56",
+      "price":97.56,
       "title":"X3  Watch Blood Oxygen GPS SmartWatch...",
       "gender":"male"
     },
@@ -522,7 +528,7 @@
       
       "image":"https://gloimg.gbtcdn.com/soa/gb/item/6878391336429613056/16414/goods_thumb_220-v1/e1c76b337a79.jpg",
       "brand":"xiomi",
-      "price":"87.99",
+      "price":87.99,
       "title":"Original Xiaomi Mi Band 6 / 6 NFC Smart Wristband...",
       "gender":"male"
     },
@@ -530,7 +536,7 @@
       
       "image":"https://gloimg.gbtcdn.com/soa/gb/item/6878030535709618176/16528/goods_thumb_220-v1/b59d7951b05c.jpg",
       "brand":"apple",
-      "price":"241.68",
+      "price":241.68,
       "title":"Apple  Smart Fitness Sports Clock Waterproof Watch Heart...",
       "gender":"female"
     }

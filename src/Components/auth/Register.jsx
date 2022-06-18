@@ -15,17 +15,16 @@ export const Register = () => {
     const register = () => {
         const { name, email, password, reEnterPassword } = user
         if( name && email && password && (password === reEnterPassword)){
-            axios.post("http://localhost:1020/register", user)
+            axios.post("http://localhost:3750/register", user)
             .then( res => {
                 alert(res.data.message)
-              
             })
         } else {
             alert("invalid input")
         }
         
     }
-    
+
     const handleChange = e => {
         const { name, value } = e.target
         setUser({
@@ -35,10 +34,10 @@ export const Register = () => {
     }
 
     
-    console.log( user)
+    
     return (
         <div className="register">
-     
+     {console.log( user)}
             <p className="text-2xl font-semibold">Register</p>
             <input type="text" name="name" value={user.name} placeholder="Your Name" onChange={ handleChange }></input>
             <input type="text" name="email" value={user.email} placeholder="Your Email" onChange={ handleChange }></input>

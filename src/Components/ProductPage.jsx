@@ -1,7 +1,18 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios"
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import {Link} from "react-router-dom"
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Pagination, Navigation } from "swiper";
+
 export const ProductPage = () => {
     const [watch, setWatch] = useState([]);
+    const [price,setPrice]=useState("")
+    const [brand,setBrand]=useState("")
+    const [gender,setGender]=useState("")
+
   const getWatch = () => {
     axios
       .get("http://localhost:8080/watches")
@@ -17,11 +28,62 @@ export const ProductPage = () => {
     getWatch();
   }, []);
 
-  console.log("watch", watch)
+  const getWatchPrice=(price)=>{
+    axios
+      .get(`http://localhost:3750/watch/sort/${price}`)
+      .then((res) => {
+        console.log(res.data);
+        setWatch(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+  useEffect(() => {
+    getWatchPrice(price);
+  }, [price]);
+
+
+  useEffect(() => {
+    getWatchBrand(brand);
+  }, [brand]);
+ const getWatchBrand=(brand)=>{
+
+    axios
+      .get(`http://localhost:3750/watch/filter/brand/${brand}`)
+      .then((res) => {
+        console.log("brandwise",res.data);
+        setWatch(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+  const getWatchGender=(gender)=>{
+    axios
+      .get(`http://localhost:3750/watch/filter/gender/${gender}`)
+      .then((res) => {
+        console.log("gender",res.data);
+        setWatch(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+  useEffect(() => {
+    getWatchGender(gender);
+  }, [gender]);
+
+// console.log("brand",brand)
+  // console.log("watch", watch)
   return (
+    <div className="ml-16">
     <div className="flex">
       {/* left side baar  */}
-      <div className="w-3/12 ml-10 mt-4 font-bold overflow-scroll">
+      <div className="w-3/12 ml-4 pl-4 mt-4 font-bold overflow-scroll">
         <div className="flex">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +104,7 @@ export const ProductPage = () => {
         <div className="mt-4 ml-2 mb-4 font-bold">
           <p>Smart Watches</p>
         </div>
-        <div className="mt-4 ml-2 mb-4   ">
+        <div className="mt-4 ml-2 mb-4  cursor-pointer ">
           <p className="font-bold">NARROW SEARCH RESULTS</p>
           <p className="font-normal">ON SALE</p>
           <p className="font-normal">IN STOCK</p>
@@ -83,6 +145,37 @@ export const ProductPage = () => {
           <p className="font-normal"> Fitness Bracelet</p>
           <p className="font-normal">Fitbit Bracelet</p>
           <p className="font-normal">Touch Bracelet</p>
+          <p className="font-bold">NARROW SEARCH RESULTS</p>
+          <p className="font-normal">ON SALE</p>
+          <p className="font-normal">IN STOCK</p>
+          <p className="font-bold mt-4">Compatible OS</p>
+          <p className="font-normal">IOS</p>
+          <p className="font-normal">ANDROID</p>
+          <p className="font-bold mt-4">Health Tracker </p>
+          <p className="font-normal">BLOOD PRESSURE</p>
+          <p className="font-normal">SEDENTARY REMINDER</p>
+          <p className="font-normal">PEDOMETER</p>
+          <p className="font-normal">SLEEP MONITOR</p>
+          <p className="font-bold mt-4">Other Functions</p>
+          <p className="font-normal">ALARM</p>
+          <p className="font-bold mt-4">Notification Type</p>
+          <p className="font-normal">SKYPE</p>
+          <p className="font-normal">WE CHAT</p>
+          <p className="font-normal">FACEBOOK</p>
+          <p className="font-normal">TWITTER</p>
+          <p className="font-bold">NARROW SEARCH RESULTS</p>
+          <p className="font-normal">ON SALE</p>
+          <p className="font-normal">IN STOCK</p>
+          <p className="font-bold mt-4">Compatible OS</p>
+          <p className="font-normal">IOS</p>
+          <p className="font-normal">ANDROID</p>
+          <p className="font-bold mt-4">Health Tracker </p>
+          <p className="font-normal">BLOOD PRESSURE</p>
+          <p className="font-normal">SEDENTARY REMINDER</p>
+          <p className="font-normal">PEDOMETER</p>
+          <p className="font-normal">SLEEP MONITOR</p>
+         
+         
         </div>
       </div>
 
@@ -205,28 +298,28 @@ export const ProductPage = () => {
             <div className="flex">
               <div>Brand: </div>
               <div className="flex">
-                <img
-                  className="w-16 h-8 border-2 ml-2 mr-4"
+                <img onClick={()=>{setBrand("huawei")}}
+                  className="w-16 h-8 border-2 cursor-pointer ml-2 mr-4"
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8UCNQKy0bALKNfQnfIW3JphY8xbh_QPOppQ&usqp=CAU"
                   alt="huawei"
                 />
-                <img
-                  className="w-16 h-8 border-2 ml-1 mr-4"
+                <img onClick={()=>{setBrand("x3")}}
+                  className="w-16 h-8 cursor-pointer border-2 ml-1 mr-4"
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTddNTwBlzDZxFRp1ikyE2wspgLefe9MqbYEw&usqp=CAU"
                   alt="x3"
                 />
-                <img
-                  className="w-16 h-8 border-2 ml-1 mr-4"
+                <img onClick={()=>{setBrand("xiomi")}}
+                  className="w-16 h-8 border-2 cursor-pointer ml-1 mr-4"
                   src="https://uidesign.gbtcdn.com/GB/image/6874/150x73.jpg"
                   alt="xiomi"
                 />
-                <img
-                  className="w-16 h-8 border-2 ml-1 mr-4"
+                <img onClick={()=>{setBrand("Amazfit")}}
+                  className="w-16 h-8 border-2 cursor-pointer ml-1 mr-4"
                   src="https://uidesign.gbtcdn.com/GB/image/brand/20181102_5779/amazfit.jpg?impolicy=hight"
                   alt="amazefit"
                 />
-                <img
-                  className="w-16 h-8 border-2 ml-1"
+                <img onClick={()=>{setBrand("apple")}}
+                  className="w-16 h-8 border-2 cursor-pointer ml-1"
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM8PCSHrC3ZkE8y6elnZuMTNqvnWQtnS1Zdg&usqp=CAU"
                   alt="apple"
                 />
@@ -234,8 +327,11 @@ export const ProductPage = () => {
             </div>
             <div className="flex mt-4">
               <p className="">Sort By: </p>
-              <button className="bg-yellow-400 ml-2 p-2">Ascending</button>
-              <button className="bg-yellow-400 ml-8 p-2">Decending</button>
+              <button onClick={()=>{setPrice("asc")}} className="bg-yellow-400 ml-2 p-2">Ascending</button>
+              <button onClick={()=>{setPrice("desc")}} className="bg-yellow-400 ml-8 p-2">Decending</button>
+            
+            <button onClick={()=>{setGender("male")}}>Male</button>
+            <button onClick={()=>{setGender("female")}}>Female</button>
             </div>
           </div>
 
@@ -251,6 +347,7 @@ export const ProductPage = () => {
                 <div className=" mb-1">
                   <img className="h-48 w-full" src={e.image} />
                   <p className=" ml-2">{e.title}</p>
+                  <div className="bg-yellow-500 w-32 ml-2">{e.gender} Watch</div>
                   <p className="ml-4 text-pink-500 ">${e.price}</p>
                   <span className="ml-4 h-6 text-pink-700 pl-2 pr-2 ">
                     {e.flashSale}
@@ -264,6 +361,177 @@ export const ProductPage = () => {
       </div> 
         </div>
       </div>
+    </div>
+    <div className="swiperdivmain">
+          <Swiper
+            slidesPerView={4}
+            spaceBetween={10}
+            loop={true}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <div className=" col ">
+                <div
+                  style={{
+                    position: "relative",
+                    height: "100%",
+                    width: "100%",
+                  }}
+                >
+                  <img
+                    style={{ height: "100%", width: "100%" }}
+                    src="https://gloimg.gbtcdn.com/soa/gb/item/6866331933228593152/16418/goods_img-v1/42f52c167490.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="col">
+                <div
+                  style={{
+                    position: "relative",
+                    height: "100%",
+                    width: "100%",
+                  }}
+                >
+                  <img
+                    style={{ height: "100%", width: "100%" }}
+                    src="https://gloimg.gbtcdn.com/soa/gb/item/6882688590640508928/16508/goods_img-v1/83e81faaf67b.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              
+           
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="col">
+                <div
+                  style={{
+                    position: "relative",
+                    height: "100%",
+                    width: "100%",
+                  }}
+                >
+                  <img
+                    style={{ height: "100%", width: "100%" }}
+                    src="https://gloimg.gbtcdn.com/soa/gb/item/6878028664286670848/16501/goods_thumb_220-v1/3f611e27287f.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="col">
+                <div
+                  style={{
+                    position: "relative",
+                    height: "100%",
+                    width: "100%",
+                  }}
+                >
+                  <img
+                    style={{ height: "100%", width: "100%" }}
+                    src="https://gloimg.gbtcdn.com/soa/gb/item/6878402251153666048/16516/goods_img-v3/ce8cec017eca.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="col">
+                <div
+                  style={{
+                    position: "relative",
+                    height: "100%",
+                    width: "100%",
+                  }}
+                >
+                  <img
+                    style={{ height: "100%", width: "100%" }}
+                    src="https://gloimg.gbtcdn.com/soa/gb/item/6615272824267153408/16204/goods_img-v1/95b7727db8f7.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="col">
+                <div
+                  style={{
+                    position: "relative",
+                    height: "100%",
+                    width: "100%",
+                  }}
+                >
+                  <img
+                    style={{ height: "100%", width: "100%" }}
+                    src="https://gloimg.gbtcdn.com/soa/gb/item/6866325577285169152/16388/goods_img-v2/9b1ec073177c.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="col">
+                <div
+                  style={{
+                    position: "relative",
+                    height: "100%",
+                    width: "100%",
+                  }}
+                >
+                  <img
+                    style={{ height: "100%", width: "100%" }}
+                    src="https://gloimg.gbtcdn.com/soa/gb/item/6905960412823613440/16538/goods_img-v5/cb7d91b7d1ad.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="col">
+                <div
+                  style={{
+                    position: "relative",
+                    height: "100%",
+                    width: "100%",
+                  }}
+                >
+                  <img
+                    style={{ height: "100%", width: "100%" }}
+                    src="https://gloimg.gbtcdn.com/soa/gb/item/6908377430696849408/16520/goods_img-v1/80f756912371.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="col">
+                <div
+                  style={{
+                    position: "relative",
+                    height: "100%",
+                    width: "100%",
+                  }}
+                >
+                  <img
+                    style={{ height: "100%", width: "100%" }}
+                    src="https://gloimg.gbtcdn.com/soa/gb/item/6907015762637156352/16509/goods_img-v3/64a2a64125fd.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+          
+        </div> 
     </div>
   );
 };
