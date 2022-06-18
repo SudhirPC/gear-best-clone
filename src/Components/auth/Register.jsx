@@ -12,14 +12,6 @@ export const Register = () => {
         reEnterPassword: ""
     })
 
-    const handleChange = e => {
-        const { name, value } = e.target
-        setUser({
-            ...user,
-            [name]: value
-        })
-    }
-
     const register = () => {
         const { name, email, password, reEnterPassword } = user
         if( name && email && password && (password === reEnterPassword)){
@@ -33,11 +25,21 @@ export const Register = () => {
         }
         
     }
+    
+    const handleChange = e => {
+        const { name, value } = e.target
+        setUser({
+            ...user,
+            [name]: value
+        })
+    }
 
+    
+    console.log( user)
     return (
         <div className="register">
-            {console.log("User", user)}
-            <h1 className="text-2xl font-semibold">Register</h1>
+     
+            <p className="text-2xl font-semibold">Register</p>
             <input type="text" name="name" value={user.name} placeholder="Your Name" onChange={ handleChange }></input>
             <input type="text" name="email" value={user.email} placeholder="Your Email" onChange={ handleChange }></input>
             <input type="password" name="password" value={user.password} placeholder="Your Password" onChange={ handleChange }></input>
