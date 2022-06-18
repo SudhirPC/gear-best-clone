@@ -6,12 +6,20 @@ import {Link} from "react-router-dom"
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
-
+import {useDispatch,useSelector} from "react-redux"
+import { AddToCartBackend } from "./Redux/Action.js";
 export const ProductPage = () => {
     const [watch, setWatch] = useState([]);
     const [price,setPrice]=useState("")
     const [brand,setBrand]=useState("")
     const [gender,setGender]=useState("")
+
+    const userId=useSelector((state)=>state.gearbest.userId)
+    const dispatch=useDispatch()
+    const AddWatchToCart=(elemId)=>{
+      dispatch(AddToCartBackend({userId,elemId}))
+   }
+
 
   const getWatch = () => {
     axios
@@ -356,7 +364,7 @@ export const ProductPage = () => {
                   <p className=" ml-2">{e.title}</p>
                   <p className="ml-4 text-red-500 ">Price : ${e.price}</p>
                   <div className="bg-yellow-500 rounded-md w-28 pl-2 ml-2">{e.gender} Watch</div>      
-                  <button className="bg-red-300 rounded-md mt-1 p-2 ml-2">Add To Cart</button>
+                  <button onClick={()=>{AddWatchToCart(e._id)}} className="bg-red-300 rounded-md mt-1 p-2 ml-2">Add To Cart</button>
                   <span className="ml-4 text-pink-700 pl-2 pr-2 ">
                     {e.flashSale}
                   </span>

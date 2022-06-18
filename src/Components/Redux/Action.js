@@ -109,4 +109,36 @@ const fetchDataRequest = (payload) => {
     }
   }
 
-  //Remove from cart axios functionality
+  export const loginUser=(payload)=>{
+    return {
+      type:types.GETUSERID,
+      payload
+    }
+  }
+  export const AddToCartBackend=(payload)=>(dispatch)=>{
+    const {userId,elemId} =payload
+    Axios.get(`http://localhost:3750/cart/${userId}/${elemId}`).then((response)=>{
+         console.log(response)
+    }).catch((error)=>{
+      console.log(error)
+    })
+    
+  }
+
+  const GetCartreducer= (payload) => {
+    console.log(types.GETCARTDATA)
+         return {
+          type:types.GETCARTDATA,
+          payload
+         }
+  }
+  export const GetWatchDataFromEnd=(payload)=>(dispatch)=>{
+    console.log(payload)
+    Axios.get(`http://localhost:3750/cart/product/watch/${payload}`).then((response)=>{
+         console.log(response.data)
+         dispatch(GetCartreducer(response.data))
+    }).catch((error)=>{
+      console.log(error)
+    })
+    
+  }

@@ -1,11 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import {Link} from "react-router-dom"
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
+import {useDispatch,useSelector} from "react-redux"
+import { GetWatchDataFromEnd } from './Redux/Action.js';
 export const CartPage = () => {
+
+    const userId=useSelector((state)=>state.gearbest.userId)
+    const cartsdatas=useSelector((state)=>state.gearbest.cart1)
+    const dispatch=useDispatch()
+    console.log("cartsdatas",cartsdatas)
+    console.log("cartpageuserId",userId)
+    const GetAllDataCart=()=>{
+        dispatch(GetWatchDataFromEnd(userId))
+  }
+  useEffect(()=>{
+    GetAllDataCart()
+  },[])
   return (
     <div className="ml-16 mt-4">
         <div className="w-11/12 flex bg-gray-100">
@@ -14,19 +28,24 @@ export const CartPage = () => {
             <div className="w-1/6 p-2 pl-4 ml-6">Subtotal</div>
             <div className="w-1/6 p-2 pl-4 ml-6">Operation</div>
         </div>
-        <div className="w-11/12 h-28 mt-4 flex bg-gray-100">
-            <div className="w-2/5 p-2 pl-4 ml-6">
-                <img src="" alt="" />
-                <p>description</p>
+        {cartsdatas.map((e)=>{
+            return(
+        <div className="w-full h-28 mt-4 flex bg-gray-100">
+            <div className="w-2/5 p-2 flex pl-4 ml-6">
+                <img className="w-48 h-18 text-sm" src={e.image} alt="" />
+                <p>{e.title}</p>
             </div>
-            <div className="w-2/5 p-2 pl-4 ml-6">
-                
+            <div className="w-2/5 p-2 pt-8 pl-4 ml-60">
+                <p>Price: ${e.price}</p>
+                <p className="line-through">RRP:{e.price+Math.ceil(Math.random(1*200))}</p>
             </div>
-            <div className="w-2/5 p-2 pl-4 ml-6"></div>
-            <div className="w-2/5 p-2 pl-4 ml-6 mt-8">
-                <button className="ml-20 ">Delete</button>
+            <div className="w-2/5 p-2 pl-4 pt-8 ml-6">
+            <p>${e.price}</p>
             </div>
-        </div>
+            <div className="w-2/5 p-2 pl-4 ml-6 mt-6">
+                <button className="ml-20 bg-yellow-400 p-2  pl-4 pr-4 ">Delete</button>
+            </div>
+        </div>)})}
         <div className="ml-96 mt-4">
            <Link to="/checkout"><button className="p-2 ml-96 pr-4 bg-yellow-600 h-12 w-32">CheckOut</button></Link>
         </div>

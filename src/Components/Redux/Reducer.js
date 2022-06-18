@@ -2,10 +2,12 @@ import * as types from './ActionType.js'
 
 const init = {
  loading: false,
+ userId:"",
 currentProduct: {},
 cart: [],
   products: [],
   error: '',
+  cart1:[]
 }
 
 export const ProductReducer = (state = init, action) => {
@@ -95,6 +97,19 @@ export const ProductReducer = (state = init, action) => {
         ...state,
         error: payload,
         loading: false,
+      }
+      case types.GETCARTDATA:
+
+        console.log("payload",payload)
+  
+        return {
+          ...state,
+          cart1: payload,
+        }
+   case types.GETUSERID:
+      return {
+        ...state,
+        userId: payload,
       }
     default:
       return state

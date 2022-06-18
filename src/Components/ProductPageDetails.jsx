@@ -7,6 +7,10 @@ import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 
 export const ProductPageDetails = () => {
+
+
+
+  
   return (
     <div className="ml-16">
       <div className="flex "> 

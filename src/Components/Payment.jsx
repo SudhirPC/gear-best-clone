@@ -63,7 +63,7 @@ export const PaymentPage = () => {
             <div>
               <input
                 className="w-full px-3 py-2 mb-1 border-2 border-gray-200 rounded-md focus:outline-none focus:border-indigo-500 transition-colors"
-                placeholder="John Smith"
+                placeholder="Enter the Name on Card"
                 type="text"
               />
             </div>
