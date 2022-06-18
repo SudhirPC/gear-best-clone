@@ -326,11 +326,15 @@ export const ProductPage = () => {
               </div>
             </div>
             <div className="flex mt-4">
-              <p className="">Sort By: </p>
+              <p className="">Sort By Price: </p>
               <div className="flex ">
               <button onClick={()=>{setPrice("asc")}} className="bg-yellow-400 ml-2 p-2">Ascending</button>
               <button onClick={()=>{setPrice("desc")}} className="bg-yellow-400 ml-6 p-2">Decending</button>
               </div>
+             
+            </div>
+            <div className="flex mt-4">
+            <p className="">Sort By Gender: </p>
               <div className="flex ">
             <button className="bg-yellow-400 ml-6 p-2 pl-4" onClick={()=>{setGender("male")}}>Male</button>
             <button className="bg-yellow-400 ml-6 p-2 pl-4" onClick={()=>{setGender("female")}}>Female</button>
@@ -348,19 +352,23 @@ export const ProductPage = () => {
                 style={{ marginRight: "2px" }}
               >
                 <div className=" mb-1">
-                  <img className="h-48 w-full" src={e.image} />
+                  <img className="h-32 w-full" src={e.image} />
                   <p className=" ml-2">{e.title}</p>
-                  <div className="bg-yellow-500 w-32 ml-2">{e.gender} Watch</div>
-                  <p className="ml-4 text-pink-500 ">${e.price}</p>
-                  <span className="ml-4 h-6 text-pink-700 pl-2 pr-2 ">
+                  <p className="ml-4 text-red-500 ">Price : ${e.price}</p>
+                  <div className="bg-yellow-500 rounded-md w-28 pl-2 ml-2">{e.gender} Watch</div>      
+                  <button className="bg-red-300 rounded-md mt-1 p-2 ml-2">Add To Cart</button>
+                  <span className="ml-4 text-pink-700 pl-2 pr-2 ">
                     {e.flashSale}
                   </span>
                   <p className="">{e.shipFrom}</p>
+                  
                 </div>
+               
               </div>
             );
           })}
         </div>
+       <Link to="/cart"><button className="bg-yellow-500 rounded-md mt-1  p-2 ml-96">Go To Cart</button></Link>
       </div> 
         </div>
       </div>

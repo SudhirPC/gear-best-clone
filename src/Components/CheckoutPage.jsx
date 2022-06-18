@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link} from "react-router-dom"
 export const CheckoutPage = () => {
   return (
     <div>
@@ -101,11 +101,11 @@ export const CheckoutPage = () => {
               </div>
             </div>
           </div>
-          <div>
-            <button className="border-gray-700 border-2 mt-6 ml-16 text-black font-2xl font-semibold bg-yellow-300  w-40">
+          <Link to="/payment">  <div>
+         <button className="border-gray-700 border-2 mt-6 ml-16 text-black font-2xl font-semibold bg-yellow-300  w-40"> 
               Confirm
             </button>
-          </div>
+          </div></Link> 
         </div>
       </div>
     </div>

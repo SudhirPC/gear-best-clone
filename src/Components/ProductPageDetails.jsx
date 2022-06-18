@@ -1,4 +1,10 @@
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import {Link} from "react-router-dom"
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Pagination, Navigation } from "swiper";
 
 export const ProductPageDetails = () => {
   return (
@@ -211,7 +217,91 @@ export const ProductPageDetails = () => {
         </div>
 
         {/* RECOMMEND DIV IMAGES IN A SLIDER */}
-        <div></div>
+        <div>
+        <div className="swiperdivmain1">
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={30}
+            loop={true}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <div className=" col ">
+                <div
+                  style={{
+                    position: "relative",
+                    height: "100%",
+                    width: "100%",
+                  }}
+                >
+                  <img
+                    style={{ height: "100%", width: "100%" }}
+                    src="https://uidesign.gbtcdn.com/GB/image/8823/1190X420-en1.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="col">
+                <div
+                  style={{
+                    position: "relative",
+                    height: "100%",
+                    width: "100%",
+                  }}
+                >
+                  <img
+                    style={{ height: "100%", width: "100%" }}
+                    src="https://uidesign.gbtcdn.com/GB/image/8823/1190X420.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="col">
+                <div
+                  style={{
+                    position: "relative",
+                    height: "100%",
+                    width: "100%",
+                  }}
+                >
+                  <img
+                    style={{ height: "100%", width: "100%" }}
+                    src="https://uidesign.gbtcdn.com/GB/image/8823/Father1190X420en.jpg?imbypass=true"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="col">
+                <div
+                  style={{
+                    position: "relative",
+                    height: "100%",
+                    width: "100%",
+                  }}
+                >
+                  <img
+                    style={{ height: "100%", width: "100%" }}
+                    src="https://uidesign.gbtcdn.com/GB/image/9534/Smart+Watches+PC+1190X420+EN.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div> 
+
+        </div>
 
         {/* DECRIPTION OF A PRODUCTS */}
         <div className="mt-16">

@@ -1,6 +1,15 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export const PaymentPage = () => {
+
+  const navigate=useNavigate()
+  const handlepayment=() => {
+
+    alert('Payment Successfull and Your Order is Placed !!!!!!')
+    navigate("/")
+  }
+
   return (
     <div>
       <div className="min-w-screen min-h-screen bg-gray-200 flex items-center justify-center px-5 pb-10 pt-16">
@@ -116,7 +125,7 @@ export const PaymentPage = () => {
               />
             </div>
           </div>
-          <div>
+          <div onClick={()=>{handlepayment()}}>
             <button className="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold">
               <i className="mdi mdi-lock-outline mr-1"></i> PAY NOW
             </button>
