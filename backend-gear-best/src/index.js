@@ -1,7 +1,7 @@
 
 const express=require('express');
 const connect=require("./configs/db.js")
-
+const Port = process.env.PORT || 2001
 const app=express();
 app.use(express.json());
 
@@ -21,10 +21,10 @@ const cart= require("./controller/cart.controller.js")
 app.use("/cart",cart)
 
 
-app.listen(3750,async function(){
+app.listen(Port,async function(){
     try {
         await connect();
-           console.log("Listening on port 3750 ")
+           console.log(`Listening on ${Port}` )
     } catch (error) {
          console.log(err)
     }

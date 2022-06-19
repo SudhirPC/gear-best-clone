@@ -122,6 +122,12 @@ export const ProductReducer = (state = init, action) => {
             ...state,
             userName:payload
           }
+          case types.LOGOUTUSER:
+            return {
+              ...state,
+              userId: "",
+              userName:""
+            }
     default:
       return state
   }

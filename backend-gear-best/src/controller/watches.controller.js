@@ -20,7 +20,15 @@ res.send(watchPage)
 return res.status(500).send(err.message)
     }
 })
-
+router.get("/:id",async(req,res)=>{
+  try{
+       const mainproduct=await WatchSchema.findById(req.params.id).lean().exec()
+       return res.status(200).send(mainproduct);
+  }
+  catch(err){
+      return res.status(500).send(err.message)
+  }
+})
 router.get("/sort/asc",async(req,res)=>{
     try {
       const data = await WatchSchema.find().sort({price:1}).lean().exec()

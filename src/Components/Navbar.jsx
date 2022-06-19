@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
-import {Link} from "react-router-dom"
+import { useDispatch, useSelector } from "react-redux";
+import {Link, useNavigate} from "react-router-dom"
+import { Logouthandleraction } from "./Redux/Action.js";
 export const Navbar = () => {
   const [visible, setVisible] = useState(false);
   
@@ -8,6 +9,12 @@ export const Navbar = () => {
 const cartNo=useSelector((state)=>state.gearbest.cart1)
 console.log("userName navbar",userName)
 
+const dispatch=useDispatch()
+  const navigate=useNavigate()
+  const logouthandler=() => {
+      dispatch(Logouthandleraction())
+      navigate("/")
+  }
   const handleToggle = () => {
     if (visible) {
       setVisible(false);
@@ -244,7 +251,7 @@ console.log("userName navbar",userName)
                 />
               </svg>
             </div>
-            <div className="ml-20 flex">
+            <div className="ml-4 flex">
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -261,8 +268,10 @@ console.log("userName navbar",userName)
                   />
                 </svg>
               </div>
-              {userName!=""?<div className="font-medium flex">Hi {userName}</div> :<Link to="/register" className="font-medium pt-2 ">Sign In</Link>}
-             
+              <div>
+              {userName!=""?<div className="flex "><div className="font-small ">Hi {userName}</div> <div onClick={()=>{logouthandler()}} className="ml-4">Logout</div></div> :<Link to="/register" className="font-small ">Sign In</Link>}
+              </div>
+            
             </div>
             {/* <div className="ml-8 mt-2 flex">
               <div>

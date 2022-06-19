@@ -163,3 +163,10 @@ const fetchDataRequest = (payload) => {
       console.log(error)
     })
   }
+
+  export  const Logouthandleraction= (payload) => {
+    return {
+     type:types.LOGOUTUSER,
+     payload
+    }
+}
