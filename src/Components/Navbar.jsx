@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {Link, useNavigate} from "react-router-dom"
-import { Logouthandleraction } from "./Redux/Action.js";
+import { GetWatchDataFromEnd, Logouthandleraction } from "./Redux/Action.js";
 export const Navbar = () => {
   const [visible, setVisible] = useState(false);
 
@@ -25,6 +25,10 @@ export const Navbar = () => {
 
     console.log(visible);
   };
+
+  useEffect(() => {
+    GetWatchDataFromEnd()
+  },[cartNo,dispatch])
   return (
     <div className="navbar">
       <div className="flex">

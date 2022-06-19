@@ -13,7 +13,7 @@ export const CartPage = () => {
     const dispatch=useDispatch()
     console.log("cartsdatas",cartsdatas)
     console.log("cartpageuserId",userId)
-
+    
     let total = cartsdatas.reduce(function (previousValue, currentValue) {
       return previousValue + currentValue.price;
     }, 0);
@@ -27,7 +27,7 @@ const GetAllDataCart=()=>{
   }
 useEffect(()=>{
     GetAllDataCart()
-  },[])
+  },[dispatch])
   return (
     <div className="ml-16 mt-4">
         <div className="w-11/12 flex bg-gray-100">

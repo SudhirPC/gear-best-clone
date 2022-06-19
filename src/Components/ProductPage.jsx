@@ -354,7 +354,7 @@ export const ProductPage = () => {
 
           {/* {products to be  append watches } */}
           <div className="w-11/12 ml-4 mt-8 h-full">
-        <div className="grid grid-cols-3 grid-rows-5  shadow-2xl">
+        <div className="grid grid-cols-3 shadow-2xl">
           {watch.map((e) => {
             return (
               <div
@@ -371,9 +371,7 @@ export const ProductPage = () => {
                     {e.flashSale}
                   </span>
                   <p className="">{e.shipFrom}</p>
-                  
                 </div>
-               
               </div>
             );
           })}
