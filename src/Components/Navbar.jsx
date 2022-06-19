@@ -269,7 +269,7 @@ const dispatch=useDispatch()
                 </svg>
               </div>
               <div>
-              {userName!=""?<div className="flex "><div className="font-small ">Hi {userName}</div> <div onClick={()=>{logouthandler()}} className="ml-4">Logout</div></div> :<Link to="/register" className="font-small ">Sign In</Link>}
+              {userName!=""?<div className="flex "><div className="font-small ">Hi {userName}</div> <div onClick={()=>{logouthandler()}} className="ml-4">Logout</div></div> :<Link to="/register" className="font-small mt-8">Sign In</Link>}
               </div>
             
             </div>
@@ -314,7 +314,8 @@ const dispatch=useDispatch()
               <p>Cart :</p>
               <p>{cartNo.length}</p>
               </div>
-            </div></Link>  
+            </div></Link>
+              
           </div>
         </div>
       </div>
