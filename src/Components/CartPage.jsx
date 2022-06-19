@@ -8,7 +8,6 @@ import { Pagination, Navigation } from "swiper";
 import {useDispatch,useSelector} from "react-redux"
 import { Cartitemdelete, GetWatchDataFromEnd } from './Redux/Action.js';
 export const CartPage = () => {
-
     const userId=useSelector((state)=>state.gearbest.userId)
     const cartsdatas=useSelector((state)=>state.gearbest.cart1)
     const dispatch=useDispatch()
@@ -19,13 +18,14 @@ export const CartPage = () => {
       return previousValue + currentValue.price;
     }, 0);
     console.log("total",total)
-    const handleDelete=(id)=>{
+
+const handleDelete=(id)=>{
       dispatch(Cartitemdelete(userId,id))
   }
-    const GetAllDataCart=()=>{
+const GetAllDataCart=()=>{
         dispatch(GetWatchDataFromEnd(userId))
   }
-  useEffect(()=>{
+useEffect(()=>{
     GetAllDataCart()
   },[])
   return (

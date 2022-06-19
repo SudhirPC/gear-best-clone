@@ -8,9 +8,9 @@ export const Navbar = () => {
   const userId=useSelector((state)=>state.gearbest.userId)
   const userName=useSelector((state)=>state.gearbest.userName)
   const cartNo=useSelector((state)=>state.gearbest.cart1)
-console.log("userName navbar",userName)
+  console.log("userName navbar",userName)
 
-const dispatch=useDispatch()
+  const dispatch=useDispatch()
   const navigate=useNavigate()
   const logouthandler=() => {
       dispatch(Logouthandleraction())
@@ -270,7 +270,7 @@ const dispatch=useDispatch()
                 </svg>
               </div>
               <div className=" pt-2">
-              {userName!=""?<div className="flex "><div className="font-small cursor-pointer ">Hi {userName}</div> <div onClick={()=>{logouthandler()}} className="ml-4 cursor-pointer">Logout</div></div> :<Link to="/register" className="font-small mt-8">Sign In</Link>}
+              {userName!==""?<div className="flex "><div className="font-small cursor-pointer ">Hi {userName}</div> <div onClick={()=>{logouthandler()}} className="ml-4 cursor-pointer">Logout</div></div> :<Link to="/register" className="font-small mt-8">Sign In</Link>}
               </div>
             
             </div>
