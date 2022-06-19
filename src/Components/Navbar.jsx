@@ -1,7 +1,12 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import {Link} from "react-router-dom"
 export const Navbar = () => {
   const [visible, setVisible] = useState(false);
+  
+  const userName=useSelector((state)=>state.gearbest.userName)
+const cartNo=useSelector((state)=>state.gearbest.cart1)
+console.log("userName navbar",userName)
 
   const handleToggle = () => {
     if (visible) {
@@ -23,7 +28,7 @@ export const Navbar = () => {
           /></Link> 
         </div>
         <div className="w">
-          <div className=" flex ml-72 pt-4 mb-4">
+          <div className=" flex ml-64 pt-4 mb-4">
             <div className="flex mr-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -182,7 +187,7 @@ export const Navbar = () => {
           <div className="flex">
             <div className=" flex ml-32 border-2 bg-yellow-500 border-yellow-500 w-6/12 rounded-2xl ">
               <div className="w-12 flex relative">
-                <p className="m-1 pl-2 " onClick={handleToggle}>
+                <p className="m-1 pl-2 cursor-pointer" onClick={handleToggle}>
                   All
                 </p>
                 <svg
@@ -239,7 +244,7 @@ export const Navbar = () => {
                 />
               </svg>
             </div>
-            <div className="ml-8 flex">
+            <div className="ml-2 flex">
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -256,7 +261,8 @@ export const Navbar = () => {
                   />
                 </svg>
               </div>
-              <Link to="/register"><p className=" mt-2">Sign In</p></Link>
+              {userName!=""?<div className="font-medium flex">Hi {userName}</div> :<Link to="/register" className="font-medium ml-4">Sign In</Link>}
+             
             </div>
             <div className="ml-8 mt-2 flex">
               <div>
@@ -277,7 +283,7 @@ export const Navbar = () => {
               </div>
               <p>Favorites</p>
             </div>
-          <Link to="/cart"><div className="ml-8 mt-2 flex">
+          <Link to="/cart"><div className="ml-4 mt-2 flex">
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -293,8 +299,12 @@ export const Navbar = () => {
                     d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                   />
                 </svg>
+
               </div>
-              <p>Cart</p>
+              <div className="flex">
+              <p>Cart :</p>
+              <p>{cartNo.length}</p>
+              </div>
             </div></Link>  
           </div>
         </div>

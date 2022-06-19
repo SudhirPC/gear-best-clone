@@ -8,6 +8,8 @@ import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 import {useDispatch,useSelector} from "react-redux"
 import { AddToCartBackend } from "./Redux/Action.js";
+
+
 export const ProductPage = () => {
     const [watch, setWatch] = useState([]);
     const [price,setPrice]=useState("")
@@ -23,7 +25,7 @@ export const ProductPage = () => {
 
   const getWatch = () => {
     axios
-      .get("http://localhost:8080/watches")
+      .get("https://gear-best-by-sudhir.herokuapp.com/watch")
       .then((res) => {
         console.log(res.data);
         setWatch(res.data);
@@ -38,7 +40,7 @@ export const ProductPage = () => {
 
   const getWatchPrice=(price)=>{
     axios
-      .get(`http://localhost:3750/watch/sort/${price}`)
+      .get(`https://gear-best-by-sudhir.herokuapp.com/watch/sort/${price}`)
       .then((res) => {
         console.log(res.data);
         setWatch(res.data);
@@ -59,7 +61,7 @@ export const ProductPage = () => {
  const getWatchBrand=(brand)=>{
 
     axios
-      .get(`http://localhost:3750/watch/filter/brand/${brand}`)
+      .get(`https://gear-best-by-sudhir.herokuapp.com/watch/filter/brand/${brand}`)
       .then((res) => {
         console.log("brandwise",res.data);
         setWatch(res.data);
@@ -71,7 +73,7 @@ export const ProductPage = () => {
 
   const getWatchGender=(gender)=>{
     axios
-      .get(`http://localhost:3750/watch/filter/gender/${gender}`)
+      .get(`https://gear-best-by-sudhir.herokuapp.com/watch/filter/gender/${gender}`)
       .then((res) => {
         console.log("gender",res.data);
         setWatch(res.data);
@@ -91,7 +93,7 @@ export const ProductPage = () => {
     <div className="ml-16">
     <div className="flex">
       {/* left side baar  */}
-      <div className="w-3/12 ml-4 pl-4 mt-4 font-bold overflow-scroll">
+      <div className="w-3/12 ml-4 h-screen pl-4 mt-10 font-bold overflow-y-scroll">
         <div className="flex">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -360,7 +362,7 @@ export const ProductPage = () => {
                 style={{ marginRight: "2px" }}
               >
                 <div className=" mb-1">
-                  <img className="h-32 w-full" src={e.image} />
+             <Link to={`${e._id}`}>    <img className="h-32 w-full" src={e.image} /></Link> 
                   <p className=" ml-2">{e.title}</p>
                   <p className="ml-4 text-red-500 ">Price : ${e.price}</p>
                   <div className="bg-yellow-500 rounded-md w-28 pl-2 ml-2">{e.gender} Watch</div>      

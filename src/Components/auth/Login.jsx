@@ -2,13 +2,13 @@ import React, {useState} from "react"
 import "./Login.css"
 import axios from "axios"
 import {Link} from "react-router-dom"
-import { loginUser } from "../Redux/Action.js"
+import { loginUser, loginUserName } from "../Redux/Action.js"
 import { useDispatch } from "react-redux"
 
 export const Login = ({ setLoginUser}) => {
 
  const dispatch=useDispatch()
-
+ 
     const [ user, setUser] = useState({
         email:"",
         password:""
@@ -23,11 +23,12 @@ export const Login = ({ setLoginUser}) => {
     }
 
     const login = () => {
-        axios.post("http://localhost:3750/login", user)
+        axios.post("https://gear-best-by-sudhir.herokuapp.com/login", user)
         .then(res => {
             console.log(res.data.user.name)
 
             dispatch(loginUser(res.data.user._id))
+            dispatch(loginUserName(res.data.user.name))
             alert(res.data.message)
             // setLoginUser(res.data.user)
        

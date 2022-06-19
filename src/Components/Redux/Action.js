@@ -108,7 +108,12 @@ const fetchDataRequest = (payload) => {
       payload,
     }
   }
-
+  export const loginUserName =(payload)=>{
+    return {
+      type:types.GETUSERNAME,
+      payload
+    }
+  }
   export const loginUser=(payload)=>{
     return {
       type:types.GETUSERID,
@@ -117,7 +122,7 @@ const fetchDataRequest = (payload) => {
   }
   export const AddToCartBackend=(payload)=>(dispatch)=>{
     const {userId,elemId} =payload
-    Axios.get(`http://localhost:3750/cart/${userId}/${elemId}`).then((response)=>{
+    Axios.get(`https://gear-best-by-sudhir.herokuapp.com/cart/${userId}/${elemId}`).then((response)=>{
          console.log(response)
     }).catch((error)=>{
       console.log(error)
@@ -134,11 +139,27 @@ const fetchDataRequest = (payload) => {
   }
   export const GetWatchDataFromEnd=(payload)=>(dispatch)=>{
     console.log(payload)
-    Axios.get(`http://localhost:3750/cart/product/watch/${payload}`).then((response)=>{
+    Axios.get(`https://gear-best-by-sudhir.herokuapp.com/cart/product/watch/${payload}`).then((response)=>{
          console.log(response.data)
          dispatch(GetCartreducer(response.data))
     }).catch((error)=>{
       console.log(error)
     })
     
+  }
+
+  const GetIndividualDataFromBackend= (payload) => {
+    // console.log(types.GETCARTDATA)
+         return {
+          type:types.GETINDIVIDUALDATA,
+          payload
+         }
+  }
+  export const getIndividualData=(payload)=>(dispatch)=>{
+    Axios.get(`https://gear-best-by-sudhir.herokuapp.com/cart/${payload}`).then((response)=>{
+      console.log(response.data)
+      dispatch(GetIndividualDataFromBackend(response.data))
+    }).catch((error)=>{
+      console.log(error)
+    })
   }

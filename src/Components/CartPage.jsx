@@ -31,8 +31,8 @@ export const CartPage = () => {
         {cartsdatas.map((e)=>{
             return(
         <div className="w-full h-28 mt-4 flex bg-gray-100">
-            <div className="w-2/5 p-2 flex pl-4 ml-6">
-                <img className="w-48 h-18 text-sm" src={e.image} alt="" />
+            <div className="w-3/5 p-2 flex pl-4">
+                <img className="w-48 h-18 text-xs" src={e.image} alt="" />
                 <p>{e.title}</p>
             </div>
             <div className="w-2/5 p-2 pt-8 pl-4 ml-60">

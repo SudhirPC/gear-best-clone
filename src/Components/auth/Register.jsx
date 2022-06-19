@@ -15,7 +15,7 @@ export const Register = () => {
     const register = () => {
         const { name, email, password, reEnterPassword } = user
         if( name && email && password && (password === reEnterPassword)){
-            axios.post("http://localhost:3750/register", user)
+            axios.post("https://gear-best-by-sudhir.herokuapp.com/register", user)
             .then( res => {
                 alert(res.data.message)
             })

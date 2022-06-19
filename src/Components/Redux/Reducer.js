@@ -3,11 +3,11 @@ import * as types from './ActionType.js'
 const init = {
  loading: false,
  userId:"",
-currentProduct: {},
-cart: [],
   products: [],
   error: '',
-  cart1:[]
+  currentProduct1:{},
+  cart1:[],
+  userName:""
 }
 
 export const ProductReducer = (state = init, action) => {
@@ -111,6 +111,17 @@ export const ProductReducer = (state = init, action) => {
         ...state,
         userId: payload,
       }
+
+      case types.GETINDIVIDUALDATA:
+        return {
+          ...state,
+          currentProduct1: payload
+        }
+        case types.GETUSERNAME:
+          return {
+            ...state,
+            userName:payload
+          }
     default:
       return state
   }

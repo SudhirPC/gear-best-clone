@@ -1,40 +1,48 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import {Link} from "react-router-dom"
+import {Link, useParams} from "react-router-dom"
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
+import { AddToCartBackend, getIndividualData } from "./Redux/Action.js";
+import { useDispatch, useSelector } from "react-redux";
 
 export const ProductPageDetails = () => {
+  const userId=useSelector((state)=>state.gearbest.userId)
+const Singleproduct=useSelector((state)=>state.gearbest.currentProduct1)
+const dispatch=useDispatch()
+  const {id} =useParams()
+  const AddWatchToCart=(elemId)=>{
+    dispatch(AddToCartBackend({userId,elemId}))
+ }
 
-
-
+  useEffect(() =>{
+      dispatch(getIndividualData(id))
+  },[])
   
   return (
     <div className="ml-16">
       <div className="flex "> 
       <div className="w-96  m-4 mr-10 p-10 border-2 border-text-gray-500">
-        <img className="w-80 h-56 mr-1"src="https://gloimg.gbtcdn.com/soa/gb/item/6615272824267153408/15972/goods_img_big-v3/a32db8320130.jpg" alt="" />
+        <img className="w-80 h-56 mr-1"src={Singleproduct.image} alt="" />
       </div>
       <div>
       <div className="  ml-10 mr-10 p-10">
         <p className="text-3xl">
-          HUAWEI WATCH GT Elegant Edition Smart Sport Watch 1.39 inch AMOLED
-          Colorful Screen Heartrate GPS Swimming Jogging Cycling SleepWatch -
-          Elegant White
+        {Singleproduct.title}
         </p>
         <div className="flex mt-4">
-      <div>Price :</div>
-      <div className="text-red-700 font-semibold text-xl"> $ 99.79</div>
+      <div className="text-red-700 font-semibold ">Price : {Singleproduct.price}</div>
+      <div className="text-xl line-through ml-2"> $ 99.79</div>
         </div>
         <div className="flex mt-4">
-          <div className="text-l">Shipping : </div>
-          <div className="text-xl  flex"> Ship between: <p className="text-xl text-red-700 font-semibold">Jun 20 - Jun 24,</p> Estimated Shipping Time: <p className="text-xl text-red-700 font-semibold">15-45 days</p></div>
+          <div className="text-l font-semibold">Shipping : </div>
+          <div className="text-xl  flex">Ship between:<p className="text-xl text-red-700 font-normal">Jun20-Jun24,</p>Estimated Shipping Time:<p className="text-xl text-red-700 font-semibold">15-45days</p></div>
         </div>
       </div> 
       <div className="flex">
-        <button className="bg-red-500 p-4 ml-24 mr-4">Add To Cart</button>
+        <button onClick={()=>{AddWatchToCart(Singleproduct._id)}} className="bg-red-500 p-4 ml-24 mr-4">Add To Cart</button>
         <button className="bg-red-200 p-4  mr-4 border-2 border-red-500">Buy Now</button>
       </div>
       </div>
@@ -222,7 +230,7 @@ export const ProductPageDetails = () => {
 
         {/* RECOMMEND DIV IMAGES IN A SLIDER */}
         <div>
-        <div className="swiperdivmain1">
+        <div className="swiperdivmain1  ml-16">
           <Swiper
             slidesPerView={1}
             spaceBetween={30}
