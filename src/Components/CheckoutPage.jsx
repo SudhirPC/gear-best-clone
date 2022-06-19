@@ -12,101 +12,181 @@ export const CheckoutPage = () => {
   
   return (
     <div>
-        <div className="ml-48 flex inputContainer">
+        <div className="ml-28 flex inputContainer">
           
       <div>
-        <p className="font-bold text-xl">Add New Address</p>
+        <p className="font-bold  mt-8 text-xl">Add New Address</p>
         <div>
-          <div className="w-3/4">
-            <div className="flex w-1/2">
-              <div className="w-1/2 ml-6">
+          <div className="w-96 mt-4">
+            {/* <div className="flex w-96">
+              <div className="w-24 ">
                 <p>First Name:</p>
               </div>
-              <div className="w-1/2 ml-2">
+              <div className="w-1/2 ml-16">
                 <input className="border-gray-700 border-2  w-40" type="text" />
               </div>
             </div>
 
-            <div className="flex w-1/2 mt-4">
-              <div className="w-1/2 ml-6">
+            <div className="flex w-72 mt-4">
+              <div className="w-24">
                 <p>Last Name:</p>
               </div>
-              <div className="w-1/2 -ml-2">
+              <div className="w-1/2 ml-16">
+                <input className="border-gray-700 border-2  w-40" type="text" />
+              </div>
+            </div> */}
+            <div className="flex w-96 mt-4">
+              <div className="w-44">
+                <p>First Name:</p>
+              </div>
+              <div className="w-1/2 ml-16">
                 <input className="border-gray-700 border-2  w-40" type="text" />
               </div>
             </div>
-
-            <div className="flex w-1/2 mt-4">
-              <div className="w-1/2 ml-6">
+            <div className="flex w-96 mt-4">
+              <div className="w-44">
+                <p>Last Name:</p>
+              </div>
+              <div className="w-1/2 ml-16">
+                <input className="border-gray-700 border-2  w-40" type="text" />
+              </div>
+            </div>
+            <div className="flex w-96 mt-4">
+              <div className="w-44">
                 <p>Address Line 1:</p>
               </div>
-              <div className="w-1/2 -ml-2">
+              <div className="w-1/2 ml-16">
                 <input className="border-gray-700 border-2  w-40" type="text" />
               </div>
             </div>
-
-            <div className="flex w-1/2 mt-4">
-              <div className="w-1/2 ml-6">
-                <p>Address Line 2 :</p>
+            <div className="flex w-96 mt-4">
+              <div className="w-44">
+                <p>Address Line 2:</p>
               </div>
-              <div className="w-1/2 -ml-2">
+              <div className="w-1/2 ml-16">
                 <input className="border-gray-700 border-2  w-40" type="text" />
               </div>
             </div>
-
-            <div className="flex w-1/2 mt-4">
-              <div className="w-1/2 ml-6">
-                <p>Country::</p>
+            <div className="flex w-96 mt-4">
+              <div className="w-44">
+                <p>Country:</p>
               </div>
-              <div className="w-1/2 -ml-2">
+              <div className="w-1/2 ml-16">
                 <input className="border-gray-700 border-2  w-40" type="text" />
               </div>
             </div>
-
-            <div className="flex w-1/2 mt-4">
-              <div className="w-1/2 ml-6">
+            <div className="flex w-96 mt-4">
+              <div className="w-44">
                 <p>State :</p>
               </div>
-              <div className="w-1/2 -ml-2">
+              <div className="w-1/2 ml-16">
                 <input className="border-gray-700 border-2  w-40" type="text" />
               </div>
             </div>
-
-            <div className="flex w-1/2 mt-4">
-              <div className="w-1/2 ml-6">
-                <p>City : </p>
+            <div className="flex w-96 mt-4">
+              <div className="w-44">
+                <p>City :</p>
               </div>
-              <div className="w-1/2 -ml-2">
+              <div className="w-1/2 ml-16">
                 <input className="border-gray-700 border-2  w-40" type="text" />
               </div>
             </div>
-
-            <div className="flex w-1/2 mt-4">
-              <div className="w-1/2 ml-6">
+            <div className="flex w-96 mt-4">
+              <div className="w-44">
                 <p>ZIP / Postal Code:</p>
               </div>
-              <div className="w-1/2 -ml-2">
+              <div className="w-1/2 ml-16">
+                <input className="border-gray-700 border-2  w-40" type="text" />
+              </div>
+            </div>
+            <div className="flex w-96 mt-4">
+              <div className="w-44">
+                <p>Phone No :</p>
+              </div>
+              <div className="w-1/2 ml-16">
+                <input className="border-gray-700 border-2  w-40" type="text" />
+              </div>
+            </div>
+            <div className="flex w-96 mt-4">
+              <div className="w-44">
+                <p>Email Address:</p>
+              </div>
+              <div className="w-1/2 ml-16">
+                <input className="border-gray-700 border-2  w-40" type="text" />
+              </div>
+            </div>
+
+            {/* <div className="flex w-72 mt-4">
+              <div className="w-24">
+                <p>Address Line 1:</p>
+              </div>
+              <div className="w-1/2 ml-16">
+                <input className="border-gray-700 border-2  w-40" type="text" />
+              </div>
+            </div> */}
+
+            {/* <div className="flex w-1/2 mt-4">
+              <div className="w-24">
+                <p>Address Line 2 :</p>
+              </div>
+              <div className="w-1/2 ml-16">
                 <input className="border-gray-700 border-2  w-40" type="text" />
               </div>
             </div>
 
             <div className="flex w-1/2 mt-4">
-              <div className="w-1/2 ml-6">
+              <div className="w-24">
+                <p>Country::</p>
+              </div>
+              <div className="w-1/2 ml-16">
+                <input className="border-gray-700 border-2  w-40" type="text" />
+              </div>
+            </div>
+
+            <div className="flex w-1/2 mt-4">
+              <div className="w-24">
+                <p>State :</p>
+              </div>
+              <div className="w-1/2 ml-16">
+                <input className="border-gray-700 border-2  w-40" type="text" />
+              </div>
+            </div>
+
+            <div className="flex w-1/2 mt-4">
+              <div className="w-24">
+                <p>City : </p>
+              </div>
+              <div className="w-1/2 ml-16">
+                <input className="border-gray-700 border-2  w-40" type="text" />
+              </div>
+            </div>
+
+            <div className="flex w-1/2 mt-4">
+              <div className="w-24">
+                <p>ZIP / Postal Code:</p>
+              </div>
+              <div className="w-1/2 ml-16">
+                <input className="border-gray-700 border-2  w-40" type="text" />
+              </div>
+            </div> */}
+
+            {/* <div className="flex w-1/2 mt-4">
+              <div className="w-24">
                 <p>Phone Number:</p>
               </div>
-              <div className="w-1/2 -ml-2">
+              <div className="w-1/2 ml-16">
                 <input className="border-gray-700 border-2  w-40" type="text" />
               </div>
-            </div>
+            </div> */}
 
-            <div className="flex w-1/2 mt-4">
-              <div className="w-1/2 ml-6">
+            {/* <div className="flex w-1/2 mt-4">
+              <div className="w-24">
                 <p>Email-Address:</p>
               </div>
-              <div className="w-1/2 -ml-2">
+              <div className="w-1/2 ml-16">
                 <input className="border-gray-700 border-2  w-40" type="text" />
               </div>
-            </div>
+            </div> */}
           </div>
           <Link to="/payment">  <div>
          <button className="border-gray-700 border-2 mt-6 ml-16 text-black font-2xl font-semibold bg-yellow-300  w-40"> 
@@ -136,7 +216,7 @@ export const CheckoutPage = () => {
                     <div>
                       <h2 className="text-xl font-bold">{e.title}</h2>
                       
-                      <span className="text-red-600">{Number(e.price)}</span> 
+                      <span className="text-red-600">{Number(e.price).toFixed(2)}</span> 
                     </div>
                   
                   </div>
@@ -144,8 +224,8 @@ export const CheckoutPage = () => {
                 })}
                 </div>
               </div>
-              <div className="flex bg-yellow-500  items-center w-32 ml-56 text-sm font-semibold border-b border-gray-300  text-heading last:border-b-0 last:text-base last:pb-0">
-                Total<p className="ml-2">₹{total}</p>
+              <div className="flex bg-yellow-500 pt-1 items-center w-48 h-18 pl-8 ml-56 text-sm font-semibold border-b border-gray-300  text-heading last:border-b-0 last:text-base last:pb-0">
+              Total Price: <p className="ml-2">${total.toFixed(2)}</p>
               </div>
             </div>
           </div>
