@@ -170,3 +170,16 @@ const fetchDataRequest = (payload) => {
      payload
     }
 }
+
+export const Cartitemdelete = (userId, id) => (dispatch) => {
+  Axios.delete(
+    `https://gear-best-by-sudhir.herokuapp.com/cart/cartitemdelete/${userId}/${id}`,
+  )
+    .then((response) => {
+      console.log( response)
+    })
+    .then(()=>{dispatch(GetWatchDataFromEnd(userId))})
+    .catch((error) => {
+      console.log(error)
+    })
+}

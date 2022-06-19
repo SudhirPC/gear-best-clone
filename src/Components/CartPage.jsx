@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 import {useDispatch,useSelector} from "react-redux"
-import { GetWatchDataFromEnd } from './Redux/Action.js';
+import { Cartitemdelete, GetWatchDataFromEnd } from './Redux/Action.js';
 export const CartPage = () => {
 
     const userId=useSelector((state)=>state.gearbest.userId)
@@ -19,7 +19,9 @@ export const CartPage = () => {
       return previousValue + currentValue.price;
     }, 0);
     console.log("total",total)
-
+    const handleDelete=(id)=>{
+      dispatch(Cartitemdelete(userId,id))
+  }
     const GetAllDataCart=()=>{
         dispatch(GetWatchDataFromEnd(userId))
   }
@@ -36,7 +38,7 @@ export const CartPage = () => {
         </div>
         {cartsdatas.map((e)=>{
             return(
-        <div className="w-full h-28 mt-4 flex bg-gray-100">
+        <div className="w-11/12 h-28 mt-4 flex bg-gray-100">
             <div className="w-3/5 p-2 flex pl-4">
                 <img className="w-48 h-18 text-xs" src={e.image} alt="" />
                 <p>{e.title}</p>
@@ -49,13 +51,12 @@ export const CartPage = () => {
             <p>${e.price}</p>
             </div>
             <div className="w-2/5 p-2 pl-4 ml-6 mt-6 ">
-              
-                <button className="ml-20 bg-yellow-400 p-2  pl-4 pr-4 ">Delete</button>
+                <button onClick={()=>{handleDelete(e._id)}} className="ml-4 bg-yellow-400 p-2  pl-4 pr-4 ">Delete</button>
             </div>
         </div>)})}
         <div className="ml-96 mt-4 flex">
-        <div className="p-2 pr-4 bg-yellow-600 h-12 w-54">Total Price: ${total.toFixed(2)}</div>
-           <Link to="/checkout"><button className="p-2 ml-96 pr-4 bg-yellow-600 h-12 w-32">CheckOut</button></Link>
+        <div className="p-2 pr-4 bg-yellow-300 h-12 w-54">Total Price: ${total.toFixed(2)}</div>
+           <Link to="/checkout"><button className="p-2 ml-96 pr-4 bg-yellow-600 text-black h-12 w-32">CheckOut</button></Link>
         </div>
         <div className="swiperdivmain">
           <Swiper

@@ -4,9 +4,10 @@ import {Link, useNavigate} from "react-router-dom"
 import { Logouthandleraction } from "./Redux/Action.js";
 export const Navbar = () => {
   const [visible, setVisible] = useState(false);
-  
+
+  const userId=useSelector((state)=>state.gearbest.userId)
   const userName=useSelector((state)=>state.gearbest.userName)
-const cartNo=useSelector((state)=>state.gearbest.cart1)
+  const cartNo=useSelector((state)=>state.gearbest.cart1)
 console.log("userName navbar",userName)
 
 const dispatch=useDispatch()
@@ -251,7 +252,7 @@ const dispatch=useDispatch()
                 />
               </svg>
             </div>
-            <div className="ml-4 flex">
+            <div className="ml-8 flex">
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -268,8 +269,8 @@ const dispatch=useDispatch()
                   />
                 </svg>
               </div>
-              <div>
-              {userName!=""?<div className="flex "><div className="font-small ">Hi {userName}</div> <div onClick={()=>{logouthandler()}} className="ml-4">Logout</div></div> :<Link to="/register" className="font-small mt-8">Sign In</Link>}
+              <div className=" pt-2">
+              {userName!=""?<div className="flex "><div className="font-small cursor-pointer ">Hi {userName}</div> <div onClick={()=>{logouthandler()}} className="ml-4 cursor-pointer">Logout</div></div> :<Link to="/register" className="font-small mt-8">Sign In</Link>}
               </div>
             
             </div>
@@ -311,8 +312,8 @@ const dispatch=useDispatch()
 
               </div>
               <div className="flex">
-              <p>Cart :</p>
-              <p>{cartNo.length}</p>
+              <p>Cart </p>
+              {userId?<div className="font-medium">:{cartNo.length}</div>:0}
               </div>
             </div></Link>
               
