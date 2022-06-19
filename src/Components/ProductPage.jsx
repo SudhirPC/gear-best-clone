@@ -362,7 +362,7 @@ export const ProductPage = () => {
                 style={{ marginRight: "2px" }}
               >
                 <div className=" mb-1">
-             <Link to={`${e._id}`}>    <img className="h-32 w-full" src={e.image} /></Link> 
+             <Link to={`/productpage/${e._id}`}>    <img className="h-32 w-full" src={e.image} /></Link> 
                   <p className=" ml-2">{e.title}</p>
                   <p className="ml-4 text-red-500 ">Price : ${e.price}</p>
                   <div className="bg-yellow-500 rounded-md w-28 pl-2 ml-2">{e.gender} Watch</div>      

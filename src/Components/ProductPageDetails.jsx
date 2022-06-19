@@ -11,15 +11,17 @@ import { useDispatch, useSelector } from "react-redux";
 export const ProductPageDetails = () => {
   const userId=useSelector((state)=>state.gearbest.userId)
 const Singleproduct=useSelector((state)=>state.gearbest.currentProduct1)
+console.log(Singleproduct)
 const dispatch=useDispatch()
   const {id} =useParams()
   const AddWatchToCart=(elemId)=>{
     dispatch(AddToCartBackend({userId,elemId}))
+   
  }
 
   useEffect(() =>{
-      dispatch(getIndividualData(id))
-  },[])
+    dispatch(getIndividualData(id))
+  },[dispatch])
   
   return (
     <div className="ml-16">

@@ -149,14 +149,15 @@ const fetchDataRequest = (payload) => {
   }
 
   const GetIndividualDataFromBackend= (payload) => {
-    // console.log(types.GETCARTDATA)
+    console.log(types.GETCARTDATA)
+    console.log(payload)
          return {
           type:types.GETINDIVIDUALDATA,
           payload
          }
   }
   export const getIndividualData=(payload)=>(dispatch)=>{
-    Axios.get(`https://gear-best-by-sudhir.herokuapp.com/cart/${payload}`).then((response)=>{
+    Axios.get(`https://gear-best-by-sudhir.herokuapp.com/watch/${payload}`).then((response)=>{
       console.log(response.data)
       dispatch(GetIndividualDataFromBackend(response.data))
     }).catch((error)=>{
