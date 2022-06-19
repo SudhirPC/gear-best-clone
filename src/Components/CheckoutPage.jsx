@@ -1,12 +1,19 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import {Link} from "react-router-dom"
 export const CheckoutPage = () => {
+
+  const cartData=useSelector((state)=>state.gearbest.cart1)
+  console.log(cartData)
+  let total = cartData.reduce(function (previousValue, currentValue) {
+    return previousValue + currentValue.price;
+  }, 0);
+  console.log("total",total)
+  
   return (
     <div>
-        <div className="ml-48 inputContainer">
-      <div>
-        {/* <img className="ml-16 w-56 h-28" src="https://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png" alt="" />  */}
-      </div>
+        <div className="ml-48 flex inputContainer">
+          
       <div>
         <p className="font-bold text-xl">Add New Address</p>
         <div>
@@ -107,6 +114,41 @@ export const CheckoutPage = () => {
             </button>
           </div></Link> 
         </div>
+      </div>
+      <div>
+
+      <div className="flex flex-col w-full ml-0 lg:ml-12 lg:w-2/5">
+            <div className="pt-12 md:pt-0 2xl:ps-4">
+              <h2 className="text-xl  mt-8 font-bold">Order Summary</h2>
+              <div className="mt-8">
+                <div className="flex flex-col space-y-4">
+                  {/* iterable div */}
+                {cartData.map((e)=>{
+                  return (
+                    <div className="flex space-x-4">
+                    <div>
+                      <img
+                        src={e.image}
+                        alt="image"
+                        className="w-60"
+                      />
+                    </div>
+                    <div>
+                      <h2 className="text-xl font-bold">{e.title}</h2>
+                      
+                      <span className="text-red-600">{Number(e.price)}</span> 
+                    </div>
+                  
+                  </div>
+                  )
+                })}
+                </div>
+              </div>
+              <div className="flex bg-yellow-500  items-center w-32 ml-56 text-sm font-semibold border-b border-gray-300  text-heading last:border-b-0 last:text-base last:pb-0">
+                Total<p className="ml-2">₹{total}</p>
+              </div>
+            </div>
+          </div>
       </div>
     </div>
     </div>

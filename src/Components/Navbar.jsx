@@ -244,7 +244,7 @@ console.log("userName navbar",userName)
                 />
               </svg>
             </div>
-            <div className="ml-2 flex">
+            <div className="ml-20 flex">
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -261,10 +261,10 @@ console.log("userName navbar",userName)
                   />
                 </svg>
               </div>
-              {userName!=""?<div className="font-medium flex">Hi {userName}</div> :<Link to="/register" className="font-medium ml-4">Sign In</Link>}
+              {userName!=""?<div className="font-medium flex">Hi {userName}</div> :<Link to="/register" className="font-medium pt-2 ">Sign In</Link>}
              
             </div>
-            <div className="ml-8 mt-2 flex">
+            {/* <div className="ml-8 mt-2 flex">
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -281,8 +281,8 @@ console.log("userName navbar",userName)
                   />
                 </svg>
               </div>
-              <p>Favorites</p>
-            </div>
+              
+            </div> */}
           <Link to="/cart"><div className="ml-4 mt-2 flex">
               <div>
                 <svg

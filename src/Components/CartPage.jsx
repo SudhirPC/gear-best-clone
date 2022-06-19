@@ -14,6 +14,12 @@ export const CartPage = () => {
     const dispatch=useDispatch()
     console.log("cartsdatas",cartsdatas)
     console.log("cartpageuserId",userId)
+
+    let total = cartsdatas.reduce(function (previousValue, currentValue) {
+      return previousValue + currentValue.price;
+    }, 0);
+    console.log("total",total)
+
     const GetAllDataCart=()=>{
         dispatch(GetWatchDataFromEnd(userId))
   }
@@ -42,11 +48,13 @@ export const CartPage = () => {
             <div className="w-2/5 p-2 pl-4 pt-8 ml-6">
             <p>${e.price}</p>
             </div>
-            <div className="w-2/5 p-2 pl-4 ml-6 mt-6">
+            <div className="w-2/5 p-2 pl-4 ml-6 mt-6 ">
+              
                 <button className="ml-20 bg-yellow-400 p-2  pl-4 pr-4 ">Delete</button>
             </div>
         </div>)})}
-        <div className="ml-96 mt-4">
+        <div className="ml-96 mt-4 flex">
+        <div className="p-2 pr-4 bg-yellow-600 h-12 w-54">Total Price: ${total.toFixed(2)}</div>
            <Link to="/checkout"><button className="p-2 ml-96 pr-4 bg-yellow-600 h-12 w-32">CheckOut</button></Link>
         </div>
         <div className="swiperdivmain">

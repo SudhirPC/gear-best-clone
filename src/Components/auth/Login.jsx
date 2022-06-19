@@ -1,14 +1,14 @@
 import React, {useState} from "react"
 import "./Login.css"
 import axios from "axios"
-import {Link} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
 import { loginUser, loginUserName } from "../Redux/Action.js"
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 
 export const Login = ({ setLoginUser}) => {
-
+    const userId=useSelector((state)=>state.gearbest.userId)
  const dispatch=useDispatch()
- 
+ const navigate=useNavigate()
     const [ user, setUser] = useState({
         email:"",
         password:""
@@ -29,9 +29,15 @@ export const Login = ({ setLoginUser}) => {
 
             dispatch(loginUser(res.data.user._id))
             dispatch(loginUserName(res.data.user.name))
-            alert(res.data.message)
+            if(userId!==""){
+                alert(res.data.message)
+                navigate("/")
+              }
+           
             // setLoginUser(res.data.user)
        
+        }).catch((err) => {
+            alert("Invalid Credientials")
         })
     }
 
