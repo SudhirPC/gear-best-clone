@@ -1,4 +1,5 @@
 <p>Gear Best is an Online Shopping for the best cell phones, electronic gadgets, toys, sporting goods, home product. </p>
+<p>Tech Stack Used HTML,CSS,JavaScript,MongoDB,React,Redux and Tailwind CSS</p>
 
 <h1>Landing Page</h1>
 <img src="https://user-images.githubusercontent.com/97445870/180730138-22c7b6fd-6d34-4d54-8928-11e68f82718a.png"/>
