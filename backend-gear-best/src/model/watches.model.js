@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 const WatchSchema = new mongoose.Schema(
   {
     image: { type: String, required: true },
@@ -10,7 +10,7 @@ const WatchSchema = new mongoose.Schema(
   {
     timestamp: true,
     versionKey: false,
-  },
-)
+  }
+);
 
-module.exports = mongoose.model('WatchSchema', WatchSchema)
+module.exports = mongoose.model("WatchSchema", WatchSchema);
