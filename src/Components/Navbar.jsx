@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {Link, useNavigate} from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom";
 import { GetWatchDataFromEnd, Logouthandleraction } from "./Redux/Action.js";
 export const Navbar = () => {
   const [visible, setVisible] = useState(false);
 
-  const userId=useSelector((state)=>state.gearbest.userId)
-  const userName=useSelector((state)=>state.gearbest.userName)
-  const cartNo=useSelector((state)=>state.gearbest.cart1)
-  console.log("userName navbar",userName)
+  const userId = useSelector((state) => state.gearbest.userId);
+  const userName = useSelector((state) => state.gearbest.userName);
+  const cartNo = useSelector((state) => state.gearbest.cart1);
+  console.log("userName navbar", userName);
 
-  const dispatch=useDispatch()
-  const navigate=useNavigate()
-  const logouthandler=() => {
-      dispatch(Logouthandleraction())
-      navigate("/")
-  }
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const logouthandler = () => {
+    dispatch(Logouthandleraction());
+    navigate("/");
+  };
   const handleToggle = () => {
     if (visible) {
       setVisible(false);
@@ -27,17 +27,19 @@ export const Navbar = () => {
   };
 
   useEffect(() => {
-    GetWatchDataFromEnd()
-  },[cartNo,dispatch])
+    GetWatchDataFromEnd();
+  }, [cartNo, dispatch]);
   return (
     <div className="navbar">
       <div className="flex">
         <div className="w-1/5 p-4 ">
-       <Link to="/"><img
-            className="h-20"
-            src="https://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png"
-            alt=""
-          /></Link> 
+          <Link to="/">
+            <img
+              className="h-20"
+              src="https://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png"
+              alt=""
+            />
+          </Link>
         </div>
         <div className="w">
           <div className=" flex ml-64 pt-4 mb-4">
@@ -274,9 +276,26 @@ export const Navbar = () => {
                 </svg>
               </div>
               <div className=" pt-2">
-              {userName!==""?<div className="flex "><div className="font-small cursor-pointer ">Hi {userName}</div> <div onClick={()=>{logouthandler()}} className="ml-4 cursor-pointer">Logout</div></div> :<Link to="/register" className="font-small mt-8">Sign In</Link>}
+                {userName !== "" ? (
+                  <div className="flex ">
+                    <div className="font-small cursor-pointer ">
+                      Hi {userName}
+                    </div>{" "}
+                    <div
+                      onClick={() => {
+                        logouthandler();
+                      }}
+                      className="ml-4 cursor-pointer"
+                    >
+                      Logout
+                    </div>
+                  </div>
+                ) : (
+                  <Link to="/register" className="font-small mt-8">
+                    Sign In
+                  </Link>
+                )}
               </div>
-            
             </div>
             {/* <div className="ml-8 mt-2 flex">
               <div>
@@ -297,30 +316,34 @@ export const Navbar = () => {
               </div>
               
             </div> */}
-          <Link to="/cart"><div className="ml-4 mt-2 flex">
-              <div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                  />
-                </svg>
-
+            <Link to="/cart">
+              <div className="ml-4 mt-2 flex">
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                    />
+                  </svg>
+                </div>
+                <div className="flex">
+                  <p>Cart </p>
+                  {userId ? (
+                    <div className="font-medium">:{cartNo.length}</div>
+                  ) : (
+                    0
+                  )}
+                </div>
               </div>
-              <div className="flex">
-              <p>Cart </p>
-              {userId?<div className="font-medium">:{cartNo.length}</div>:0}
-              </div>
-            </div></Link>
-              
+            </Link>
           </div>
         </div>
       </div>

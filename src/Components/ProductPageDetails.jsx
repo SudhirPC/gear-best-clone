@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import {Link, useParams} from "react-router-dom"
+import { Link, useParams } from "react-router-dom";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
@@ -9,52 +9,63 @@ import { AddToCartBackend, getIndividualData } from "./Redux/Action.js";
 import { useDispatch, useSelector } from "react-redux";
 
 export const ProductPageDetails = () => {
-  const userId=useSelector((state)=>state.gearbest.userId)
-const Singleproduct=useSelector((state)=>state.gearbest.currentProduct1)
-console.log(Singleproduct)
-const dispatch=useDispatch()
-  const {id} =useParams()
-  const AddWatchToCart=(elemId)=>{
-    dispatch(AddToCartBackend({userId,elemId}))
-   
- }
+  const userId = useSelector((state) => state.gearbest.userId);
+  const Singleproduct = useSelector((state) => state.gearbest.currentProduct1);
+  console.log(Singleproduct);
+  const dispatch = useDispatch();
+  const { id } = useParams();
+  const AddWatchToCart = (elemId) => {
+    dispatch(AddToCartBackend({ userId, elemId }));
+  };
 
-  useEffect(() =>{
-    dispatch(getIndividualData(id))
-  },[dispatch])
-  
+  useEffect(() => {
+    dispatch(getIndividualData(id));
+  }, [dispatch]);
+
   return (
     <div className="ml-16">
-      <div className="flex "> 
-      <div className="w-96  m-4 mr-10 p-10 border-2 border-text-gray-500">
-        <img className="w-80 h-56 mr-1"src={Singleproduct.image} alt="" />
-      </div>
-      <div>
-      <div className="  ml-10 mr-10 p-10">
-        <p className="text-3xl">
-        {Singleproduct.title}
-        </p>
-        <div className="flex mt-4">
-      <div className="text-red-700 font-semibold ">Price : {Singleproduct.price}</div>
-      <div className="text-xl line-through ml-2"> $ 99.79</div>
+      <div className="flex ">
+        <div className="w-96  m-4 mr-10 p-10 border-2 border-text-gray-500">
+          <img className="w-80 h-56 mr-1" src={Singleproduct.image} alt="" />
         </div>
-        <div className="flex mt-4">
-          <div className="text-l font-semibold">Shipping : </div>
-          <div className="text-xl  flex">Ship between:<p className="text-xl text-red-700 font-normal">Jun20-Jun24,</p>Estimated Shipping Time:<p className="text-xl text-red-700 font-semibold">15-45days</p></div>
+        <div>
+          <div className="  ml-10 mr-10 p-10">
+            <p className="text-3xl">{Singleproduct.title}</p>
+            <div className="flex mt-4">
+              <div className="text-red-700 font-semibold ">
+                Price : {Singleproduct.price}
+              </div>
+              <div className="text-xl line-through ml-2"> $ 99.79</div>
+            </div>
+            <div className="flex mt-4">
+              <div className="text-l font-semibold">Shipping : </div>
+              <div className="text-xl  flex">
+                Ship between:
+                <p className="text-xl text-red-700 font-normal">Jun20-Jun24,</p>
+                Estimated Shipping Time:
+                <p className="text-xl text-red-700 font-semibold">15-45days</p>
+              </div>
+            </div>
+          </div>
+          <div className="flex">
+            <button
+              onClick={() => {
+                AddWatchToCart(Singleproduct._id);
+              }}
+              className="bg-red-500 p-4 ml-24 mr-4"
+            >
+              Add To Cart
+            </button>
+            <button className="bg-red-200 p-4  mr-4 border-2 border-red-500">
+              Buy Now
+            </button>
+          </div>
         </div>
-      </div> 
-      <div className="flex">
-        <button onClick={()=>{AddWatchToCart(Singleproduct._id)}} className="bg-red-500 p-4 ml-24 mr-4">Add To Cart</button>
-        <button className="bg-red-200 p-4  mr-4 border-2 border-red-500">Buy Now</button>
       </div>
-      </div>
-      </div>
-
-
 
       {/* icon-div and companylogo payment  on product details page*/}
       <div className="flex">
-      <div className="flex mt-4  mb-6">
+        <div className="flex mt-4  mb-6">
           <a
             href="#!"
             type="button"
@@ -188,50 +199,103 @@ const dispatch=useDispatch()
           </a>
         </div>
 
-
         {/* logo payment company div */}
         <div className="flex  mt-4 ml-16">
           <div className="mr-4">
-            <img src="https://css.gbtcdn.com/imagecache/gbw/img/site/paypal@.png" alt="" />
+            <img
+              src="https://css.gbtcdn.com/imagecache/gbw/img/site/paypal@.png"
+              alt=""
+            />
           </div>
 
           <div className="mr-4">
-            <img src="https://uidesign.gbtcdn.com/GB/images/others/GB_brandpic/mm/VISA.png?imbypass=true" alt="" />
+            <img
+              src="https://uidesign.gbtcdn.com/GB/images/others/GB_brandpic/mm/VISA.png?imbypass=true"
+              alt=""
+            />
           </div>
 
           <div className="mr-4">
-            <img className="w-24 h-14 -m-2" src="https://uidesign.gbtcdn.com/GB/images/others/GB_brandpic/mm/mc_vrt_opt_pos_73_2x.png?imbypass=true" alt="" />
+            <img
+              className="w-24 h-14 -m-2"
+              src="https://uidesign.gbtcdn.com/GB/images/others/GB_brandpic/mm/mc_vrt_opt_pos_73_2x.png?imbypass=true"
+              alt=""
+            />
           </div>
-        <div className="flex mr-4">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-          <path stroke-linecap="round" strokeLinejoin="round" d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2zM10 8.5a.5.5 0 11-1 0 .5.5 0 011 0zm5 5a.5.5 0 11-1 0 .5.5 0 011 0z" />
-        </svg>
-        <p>Tax Info</p>
-        </div>
-        <div className="flex mr-4">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-          <path stroke-linecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-          <p>Price Protection</p>
-        </div>
-        <div className="flex mr-4 ">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-        <path stroke-linecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-      <p>Price Disclaimer</p>
-        </div>
+          <div className="flex mr-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                stroke-linecap="round"
+                strokeLinejoin="round"
+                d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2zM10 8.5a.5.5 0 11-1 0 .5.5 0 011 0zm5 5a.5.5 0 11-1 0 .5.5 0 011 0z"
+              />
+            </svg>
+            <p>Tax Info</p>
+          </div>
+          <div className="flex mr-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                stroke-linecap="round"
+                strokeLinejoin="round"
+                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            <p>Price Protection</p>
+          </div>
+          <div className="flex mr-4 ">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                stroke-linecap="round"
+                strokeLinejoin="round"
+                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            <p>Price Disclaimer</p>
+          </div>
 
-        <div className="flex mr-4">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-          <path stroke-linecap="round" strokeLinejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-        </svg>
-        <p>Report Items</p>
+          <div className="flex mr-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                stroke-linecap="round"
+                strokeLinejoin="round"
+                d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+              />
+            </svg>
+            <p>Report Items</p>
+          </div>
         </div>
-        </div>
-        </div>
+      </div>
 
-        {/* RECOMMEND DIV IMAGES IN A SLIDER */}
-        <div>
+      {/* RECOMMEND DIV IMAGES IN A SLIDER */}
+      <div>
         <div className="swiperdivmain1  ml-16">
           <Swiper
             slidesPerView={1}
@@ -313,52 +377,98 @@ const dispatch=useDispatch()
               </div>
             </SwiperSlide>
           </Swiper>
-        </div> 
-
         </div>
+      </div>
 
-        {/* DECRIPTION OF A PRODUCTS */}
-        <div className="mt-16">
-          <div className="flex bg-gray-300 w-11/12">
-            <button className="pl-4 pr-4 bg-yellow-300">Decription</button>
-            <button className="pl-4 pr-4 hover:bg-yellow-300">Review</button>
-          </div>
-          <div className="w-10/12 ml-28 mt-2 text-xl">
-          <h1>Decription</h1> 
-        <div className="w-10/12 ml-8 mt-4  mb-8">
-        <h1 className="text-2xl text-black">Main Features</h1>
-        <hr/>
-        <p className="mt-4">Slim. Beautiful. Strong.</p>
-        <p>Featuring a double crown AMOLED screen and lightweight design, this watch is classy and sleek. Pair that with a ceramic bezel design and stainless steel shell, you're ready to explore.</p>
-        <p className="mt-4">Style for Your Life</p>
-        <p>A wide selection of watch straps of different colours and materials style your every look and mood. The QuickFit straps let you quickly and easily change it without any tools.</p>
-        <p className="mt-4">Long Battery Life, Travel without Limits</p>
-        <p>HUAWEI WATCH GT provides a long battery life* to keep up with wherever you go.</p>
-        <p className="mt-4">Real-time Heartrate Monitoring</p>
-        <p>HUAWEI TruSeen™ 3.0 heartrate monitoring technology provides a more efficient and accurate real-time personal measurement of your heartrate by using a self-learning algorithm and innovative sensors.</p>
-        <p className="mt-4">3 Satellites and 1 Precise Location</p>
-        <p>HUAWEI WATCH GT supports 3 Satellite Positioning Systems (GPS, GLONASS, GALILEO) worldwide to offer more accurate, faster and precise positioning.</p>
-        <p className="mt-4">Scientific Coaching</p>
-        <p>Stay Fit with the HUAWEI WATCH GT that provides coaching in introductory to advanced running courses to assist you in real-time while also providing guidance training and giving time-movement effect feedback.</p>
-        <p className="mt-4">Always Ready</p>
-        <p>Multiple sports modes for many outdoor, indoor and training activities, the HUAWEI WATCH GT is ready to Make It Possible.</p>
-        
-
-        {/* specification  of products*/}
-
-        <div>
-          <img src="https://des.gbtcdn.com/storage/desc/6615272824267153408/15972/f637591be6ec.jpg" alt="" />
-          <img src="https://des.gbtcdn.com/storage/desc/6615272824267153408/15972/06f5178a7c61.jpg" alt="" />
-          <img src="https://des.gbtcdn.com/storage/desc/6615272824267153408/15972/6e07a5f3d5f6.jpg" alt="" />
-          <img src="https://des.gbtcdn.com/storage/desc/6615272824267153408/15972/d889d2631bff.jpg" alt="" />
-          <img src="https://des.gbtcdn.com/storage/desc/6615272824267153408/15972/b6f84d33b031.jpg" alt="" />
-          <img src="https://des.gbtcdn.com/storage/desc/6615272824267153408/15972/88a6de09aa42.jpg" alt="" />
-          <img src="https://des.gbtcdn.com/storage/desc/6615272824267153408/15972/9528bb87ba92.jpg" alt="" />
+      {/* DECRIPTION OF A PRODUCTS */}
+      <div className="mt-16">
+        <div className="flex bg-gray-300 w-11/12">
+          <button className="pl-4 pr-4 bg-yellow-300">Decription</button>
+          <button className="pl-4 pr-4 hover:bg-yellow-300">Review</button>
         </div>
+        <div className="w-10/12 ml-28 mt-2 text-xl">
+          <h1>Decription</h1>
+          <div className="w-10/12 ml-8 mt-4  mb-8">
+            <h1 className="text-2xl text-black">Main Features</h1>
+            <hr />
+            <p className="mt-4">Slim. Beautiful. Strong.</p>
+            <p>
+              Featuring a double crown AMOLED screen and lightweight design,
+              this watch is classy and sleek. Pair that with a ceramic bezel
+              design and stainless steel shell, you're ready to explore.
+            </p>
+            <p className="mt-4">Style for Your Life</p>
+            <p>
+              A wide selection of watch straps of different colours and
+              materials style your every look and mood. The QuickFit straps let
+              you quickly and easily change it without any tools.
+            </p>
+            <p className="mt-4">Long Battery Life, Travel without Limits</p>
+            <p>
+              HUAWEI WATCH GT provides a long battery life* to keep up with
+              wherever you go.
+            </p>
+            <p className="mt-4">Real-time Heartrate Monitoring</p>
+            <p>
+              HUAWEI TruSeen™ 3.0 heartrate monitoring technology provides a
+              more efficient and accurate real-time personal measurement of your
+              heartrate by using a self-learning algorithm and innovative
+              sensors.
+            </p>
+            <p className="mt-4">3 Satellites and 1 Precise Location</p>
+            <p>
+              HUAWEI WATCH GT supports 3 Satellite Positioning Systems (GPS,
+              GLONASS, GALILEO) worldwide to offer more accurate, faster and
+              precise positioning.
+            </p>
+            <p className="mt-4">Scientific Coaching</p>
+            <p>
+              Stay Fit with the HUAWEI WATCH GT that provides coaching in
+              introductory to advanced running courses to assist you in
+              real-time while also providing guidance training and giving
+              time-movement effect feedback.
+            </p>
+            <p className="mt-4">Always Ready</p>
+            <p>
+              Multiple sports modes for many outdoor, indoor and training
+              activities, the HUAWEI WATCH GT is ready to Make It Possible.
+            </p>
+
+            {/* specification  of products*/}
+
+            <div>
+              <img
+                src="https://des.gbtcdn.com/storage/desc/6615272824267153408/15972/f637591be6ec.jpg"
+                alt=""
+              />
+              <img
+                src="https://des.gbtcdn.com/storage/desc/6615272824267153408/15972/06f5178a7c61.jpg"
+                alt=""
+              />
+              <img
+                src="https://des.gbtcdn.com/storage/desc/6615272824267153408/15972/6e07a5f3d5f6.jpg"
+                alt=""
+              />
+              <img
+                src="https://des.gbtcdn.com/storage/desc/6615272824267153408/15972/d889d2631bff.jpg"
+                alt=""
+              />
+              <img
+                src="https://des.gbtcdn.com/storage/desc/6615272824267153408/15972/b6f84d33b031.jpg"
+                alt=""
+              />
+              <img
+                src="https://des.gbtcdn.com/storage/desc/6615272824267153408/15972/88a6de09aa42.jpg"
+                alt=""
+              />
+              <img
+                src="https://des.gbtcdn.com/storage/desc/6615272824267153408/15972/9528bb87ba92.jpg"
+                alt=""
+              />
+            </div>
           </div>
-          </div>
-       
         </div>
+      </div>
     </div>
   );
 };

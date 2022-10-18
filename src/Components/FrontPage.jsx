@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
@@ -40,7 +40,9 @@ export const FrontPage = () => {
     <div>
       <div className="mainbodyupper">
         <div className="leftuppermain">
-         <Link to="/productpage"><div className=" pl-4 hover:bg-gray-100">Smart Watches</div></Link>
+          <Link to="/productpage">
+            <div className=" pl-4 hover:bg-gray-100">Smart Watches</div>
+          </Link>
           <div className=" pl-4 hover:bg-gray-100">Consumer Electronics</div>
           <div className=" pl-4 hover:bg-gray-100">Industrial & Scientific</div>
           <div className=" pl-4 hover:bg-gray-100">
@@ -64,7 +66,7 @@ export const FrontPage = () => {
           <div className=" pl-4 hover:bg-gray-100">Watches & Jewelry</div>
           <div className=" pl-4 hover:bg-gray-100">Gearbest Promotion</div>
         </div>
-         
+
         <div className="swiperdivmain1">
           <Swiper
             slidesPerView={1}
@@ -146,7 +148,7 @@ export const FrontPage = () => {
               </div>
             </SwiperSlide>
           </Swiper>
-        </div> 
+        </div>
       </div>
       <div className="flex ml-16 mt-4">
         <div>
@@ -330,190 +332,196 @@ export const FrontPage = () => {
           </div>
         </div>
       </div>
-      
-{/* new images div swiper */}
-<div className="ml-16">
-<div className="flex mt-16 mb-2 ml-4">
-<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
-</svg>
-        <p className="font-bold text-xl ">NEW</p>
-      </div>
-  <div>
-  <div className="swiperdivmain">
-          <Swiper
-            slidesPerView={4}
-            spaceBetween={10}
-            loop={true}
-            pagination={{
-              clickable: true,
-            }}
-            navigation={true}
-            modules={[Pagination, Navigation]}
-            className="mySwiper"
+
+      {/* new images div swiper */}
+      <div className="ml-16">
+        <div className="flex mt-16 mb-2 ml-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth="2"
           >
-            <SwiperSlide>
-              <div className=" col ">
-                <div
-                  style={{
-                    position: "relative",
-                    height: "100%",
-                    width: "100%",
-                  }}
-                >
-                  <img
-                    style={{ height: "100%", width: "100%" }}
-                    src="https://gloimg.gbtcdn.com/soa/gb/item/6866331933228593152/16418/goods_img-v1/42f52c167490.jpg"
-                    alt=""
-                  />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M12 4v16m8-8H4"
+            />
+          </svg>
+          <p className="font-bold text-xl ">NEW</p>
+        </div>
+        <div>
+          <div className="swiperdivmain">
+            <Swiper
+              slidesPerView={4}
+              spaceBetween={10}
+              loop={true}
+              pagination={{
+                clickable: true,
+              }}
+              navigation={true}
+              modules={[Pagination, Navigation]}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <div className=" col ">
+                  <div
+                    style={{
+                      position: "relative",
+                      height: "100%",
+                      width: "100%",
+                    }}
+                  >
+                    <img
+                      style={{ height: "100%", width: "100%" }}
+                      src="https://gloimg.gbtcdn.com/soa/gb/item/6866331933228593152/16418/goods_img-v1/42f52c167490.jpg"
+                      alt=""
+                    />
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="col">
-                <div
-                  style={{
-                    position: "relative",
-                    height: "100%",
-                    width: "100%",
-                  }}
-                >
-                  <img
-                    style={{ height: "100%", width: "100%" }}
-                    src="https://gloimg.gbtcdn.com/soa/gb/item/6882688590640508928/16508/goods_img-v1/83e81faaf67b.jpg"
-                    alt=""
-                  />
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="col">
+                  <div
+                    style={{
+                      position: "relative",
+                      height: "100%",
+                      width: "100%",
+                    }}
+                  >
+                    <img
+                      style={{ height: "100%", width: "100%" }}
+                      src="https://gloimg.gbtcdn.com/soa/gb/item/6882688590640508928/16508/goods_img-v1/83e81faaf67b.jpg"
+                      alt=""
+                    />
+                  </div>
                 </div>
-              </div>
-              
-           
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="col">
-                <div
-                  style={{
-                    position: "relative",
-                    height: "100%",
-                    width: "100%",
-                  }}
-                >
-                  <img
-                    style={{ height: "100%", width: "100%" }}
-                    src="https://gloimg.gbtcdn.com/soa/gb/item/6878028664286670848/16501/goods_thumb_220-v1/3f611e27287f.jpg"
-                    alt=""
-                  />
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="col">
+                  <div
+                    style={{
+                      position: "relative",
+                      height: "100%",
+                      width: "100%",
+                    }}
+                  >
+                    <img
+                      style={{ height: "100%", width: "100%" }}
+                      src="https://gloimg.gbtcdn.com/soa/gb/item/6878028664286670848/16501/goods_thumb_220-v1/3f611e27287f.jpg"
+                      alt=""
+                    />
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="col">
-                <div
-                  style={{
-                    position: "relative",
-                    height: "100%",
-                    width: "100%",
-                  }}
-                >
-                  <img
-                    style={{ height: "100%", width: "100%" }}
-                    src="https://gloimg.gbtcdn.com/soa/gb/item/6878402251153666048/16516/goods_img-v3/ce8cec017eca.jpg"
-                    alt=""
-                  />
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="col">
+                  <div
+                    style={{
+                      position: "relative",
+                      height: "100%",
+                      width: "100%",
+                    }}
+                  >
+                    <img
+                      style={{ height: "100%", width: "100%" }}
+                      src="https://gloimg.gbtcdn.com/soa/gb/item/6878402251153666048/16516/goods_img-v3/ce8cec017eca.jpg"
+                      alt=""
+                    />
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="col">
-                <div
-                  style={{
-                    position: "relative",
-                    height: "100%",
-                    width: "100%",
-                  }}
-                >
-                  <img
-                    style={{ height: "100%", width: "100%" }}
-                    src="https://gloimg.gbtcdn.com/soa/gb/item/6615272824267153408/16204/goods_img-v1/95b7727db8f7.jpg"
-                    alt=""
-                  />
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="col">
+                  <div
+                    style={{
+                      position: "relative",
+                      height: "100%",
+                      width: "100%",
+                    }}
+                  >
+                    <img
+                      style={{ height: "100%", width: "100%" }}
+                      src="https://gloimg.gbtcdn.com/soa/gb/item/6615272824267153408/16204/goods_img-v1/95b7727db8f7.jpg"
+                      alt=""
+                    />
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="col">
-                <div
-                  style={{
-                    position: "relative",
-                    height: "100%",
-                    width: "100%",
-                  }}
-                >
-                  <img
-                    style={{ height: "100%", width: "100%" }}
-                    src="https://gloimg.gbtcdn.com/soa/gb/item/6866325577285169152/16388/goods_img-v2/9b1ec073177c.jpg"
-                    alt=""
-                  />
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="col">
+                  <div
+                    style={{
+                      position: "relative",
+                      height: "100%",
+                      width: "100%",
+                    }}
+                  >
+                    <img
+                      style={{ height: "100%", width: "100%" }}
+                      src="https://gloimg.gbtcdn.com/soa/gb/item/6866325577285169152/16388/goods_img-v2/9b1ec073177c.jpg"
+                      alt=""
+                    />
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="col">
-                <div
-                  style={{
-                    position: "relative",
-                    height: "100%",
-                    width: "100%",
-                  }}
-                >
-                  <img
-                    style={{ height: "100%", width: "100%" }}
-                    src="https://gloimg.gbtcdn.com/soa/gb/item/6905960412823613440/16538/goods_img-v5/cb7d91b7d1ad.jpg"
-                    alt=""
-                  />
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="col">
+                  <div
+                    style={{
+                      position: "relative",
+                      height: "100%",
+                      width: "100%",
+                    }}
+                  >
+                    <img
+                      style={{ height: "100%", width: "100%" }}
+                      src="https://gloimg.gbtcdn.com/soa/gb/item/6905960412823613440/16538/goods_img-v5/cb7d91b7d1ad.jpg"
+                      alt=""
+                    />
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="col">
-                <div
-                  style={{
-                    position: "relative",
-                    height: "100%",
-                    width: "100%",
-                  }}
-                >
-                  <img
-                    style={{ height: "100%", width: "100%" }}
-                    src="https://gloimg.gbtcdn.com/soa/gb/item/6908377430696849408/16520/goods_img-v1/80f756912371.jpg"
-                    alt=""
-                  />
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="col">
+                  <div
+                    style={{
+                      position: "relative",
+                      height: "100%",
+                      width: "100%",
+                    }}
+                  >
+                    <img
+                      style={{ height: "100%", width: "100%" }}
+                      src="https://gloimg.gbtcdn.com/soa/gb/item/6908377430696849408/16520/goods_img-v1/80f756912371.jpg"
+                      alt=""
+                    />
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="col">
-                <div
-                  style={{
-                    position: "relative",
-                    height: "100%",
-                    width: "100%",
-                  }}
-                >
-                  <img
-                    style={{ height: "100%", width: "100%" }}
-                    src="https://gloimg.gbtcdn.com/soa/gb/item/6907015762637156352/16509/goods_img-v3/64a2a64125fd.jpg"
-                    alt=""
-                  />
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="col">
+                  <div
+                    style={{
+                      position: "relative",
+                      height: "100%",
+                      width: "100%",
+                    }}
+                  >
+                    <img
+                      style={{ height: "100%", width: "100%" }}
+                      src="https://gloimg.gbtcdn.com/soa/gb/item/6907015762637156352/16509/goods_img-v3/64a2a64125fd.jpg"
+                      alt=""
+                    />
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          </Swiper>
-          
-        </div> 
-  </div>
-</div>
-
-
+              </SwiperSlide>
+            </Swiper>
+          </div>
+        </div>
+      </div>
 
       {/* Recommended image append */}
       <div className="flex mt-16 mb-4 ml-16">

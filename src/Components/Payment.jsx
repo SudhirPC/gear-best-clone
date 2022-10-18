@@ -1,22 +1,17 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export const PaymentPage = () => {
-
-  const navigate=useNavigate()
-  const handlepayment=() => {
-
-    alert('Payment Successfull and Your Order is Placed !!!!!!')
-    navigate("/")
-  }
+  const navigate = useNavigate();
+  const handlepayment = () => {
+    alert("Payment Successfull and Your Order is Placed !!!!!!");
+    navigate("/");
+  };
 
   return (
     <div>
       <div className="min-w-screen min-h-screen bg-gray-200 flex items-center justify-center px-5 pb-10 pt-16">
-        <div
-          className="w-full mx-auto rounded-lg bg-white shadow-lg p-5 text-gray-700"
-       
-        >
+        <div className="w-full mx-auto rounded-lg bg-white shadow-lg p-5 text-gray-700">
           <div className="w-full pt-1 pb-5">
             <div className="bg-yellow-500 text-white overflow-hidden rounded-full w-20 h-20 -mt-16 mx-auto shadow-lg flex justify-center items-center">
               <i className="mdi mdi-credit-card-outline text-3xl"></i>
@@ -35,7 +30,6 @@ export const PaymentPage = () => {
                   className="form-radio h-5 w-5 text-indigo-500"
                   name="type"
                   id="type1"
-               
                 />
                 <img
                   src="https://leadershipmemphis.org/wp-content/uploads/2020/08/780370.png"
@@ -125,7 +119,11 @@ export const PaymentPage = () => {
               />
             </div>
           </div>
-          <div onClick={()=>{handlepayment()}}>
+          <div
+            onClick={() => {
+              handlepayment();
+            }}
+          >
             <button className="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold">
               <i className="mdi mdi-lock-outline mr-1"></i> PAY NOW
             </button>
@@ -133,7 +131,5 @@ export const PaymentPage = () => {
         </div>
       </div>
     </div>
-  )
-}
-
- 
+  );
+};

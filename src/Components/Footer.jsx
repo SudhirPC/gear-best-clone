@@ -7,7 +7,7 @@ export const Footer = () => {
       <div className="flex w-11/12 ml-8 pt-8 bg-white shadow ">
         <div className="w-1/5 ml-8 mr-10">
           <img src="https://css.gbtcdn.com/imagecache/gbw/img/site/new-logo.png" />
-          <h4  style={{ marginTop: "10px", marginLeft: "15px" }}>
+          <h4 style={{ marginTop: "10px", marginLeft: "15px" }}>
             AFFORTABLE QUALITY FUN SHOPPING
           </h4>
         </div>
@@ -249,33 +249,60 @@ export const Footer = () => {
           <p className="hover:cursor-pointer hover:underline">About Us</p>
           <p className="hover:cursor-pointer hover:underline">Top Searches</p>
           <p className="hover:cursor-pointer hover:underline">Privacy Policy</p>
-          <p className="hover:cursor-pointer hover:underline">Terms and Conditions</p>
-          <p className="hover:cursor-pointer hover:underline">Intellectual Property Policy</p>
+          <p className="hover:cursor-pointer hover:underline">
+            Terms and Conditions
+          </p>
+          <p className="hover:cursor-pointer hover:underline">
+            Intellectual Property Policy
+          </p>
           <p className="hover:cursor-pointer hover:underline">Testimonials</p>
           <p className="hover:cursor-pointer hover:underline">Contact Us</p>
-          <p className="hover:cursor-pointer hover:underline"> Sell on Gearbest </p>
+          <p className="hover:cursor-pointer hover:underline">
+            {" "}
+            Sell on Gearbest{" "}
+          </p>
           <p className="hover:cursor-pointer hover:underline">Cookies Policy</p>
           <p className="hover:cursor-pointer hover:underline">Top Brands</p>
-          <p className="hover:cursor-pointer hover:underline">Gearbest Official Blog</p>
+          <p className="hover:cursor-pointer hover:underline">
+            Gearbest Official Blog
+          </p>
         </div>
         <div className="ml-32 text-sm ">
           <h1 className="text-xl text-black"> Customer Service</h1>
-          <p className="hover:cursor-pointer hover:underline">Shipping Information</p>
+          <p className="hover:cursor-pointer hover:underline">
+            Shipping Information
+          </p>
           <p className="hover:cursor-pointer hover:underline">My Favorites</p>
-          <p className="hover:cursor-pointer hover:underline">FAQ For Newsletter Subscription</p>
+          <p className="hover:cursor-pointer hover:underline">
+            FAQ For Newsletter Subscription
+          </p>
           <p className="hover:cursor-pointer hover:underline">My Points</p>
-          <p className="hover:cursor-pointer hover:underline">Warranty and Return</p>
-          <p className="hover:cursor-pointer hover:underline">Payment Methods</p>
-          <p className="hover:cursor-pointer hover:underline">Deposit Expansion</p>
+          <p className="hover:cursor-pointer hover:underline">
+            Warranty and Return
+          </p>
+          <p className="hover:cursor-pointer hover:underline">
+            Payment Methods
+          </p>
+          <p className="hover:cursor-pointer hover:underline">
+            Deposit Expansion
+          </p>
           <p className="hover:cursor-pointer hover:underline">FAQ & Support </p>
           <p className="hover:cursor-pointer hover:underline">Sitemap</p>
-          <p className="hover:cursor-pointer hover:underline">Gearbest Wallet Instruction</p>
-          <p className="hover:cursor-pointer hover:underline">FAQs about COVID-19</p>
+          <p className="hover:cursor-pointer hover:underline">
+            Gearbest Wallet Instruction
+          </p>
+          <p className="hover:cursor-pointer hover:underline">
+            FAQs about COVID-19
+          </p>
         </div>
         <div className=" ml-32 text-sm ">
           <h1 className="text-xl text-black">Other Business</h1>
-          <p className="hover:cursor-pointer hover:underline">Partnership Programs</p>
-          <p className="hover:cursor-pointer hover:underline">Associate Program</p>
+          <p className="hover:cursor-pointer hover:underline">
+            Partnership Programs
+          </p>
+          <p className="hover:cursor-pointer hover:underline">
+            Associate Program
+          </p>
         </div>
         <div className="ml-32 text-sm hover:cursor-pointer hover:underline">
           <h1 className="text-xl text-black">Download App!</h1>
@@ -300,29 +327,84 @@ export const Footer = () => {
       </div>
       <div className="mt-8">
         <div className="flex ml-32  companylogo">
-        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/money.png" alt="" />
-            <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/m.png" alt="" />
-            <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/rese.png" alt="" />
-            <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/paypal.png" alt="" />
-            <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/visa.png" alt="" />
-            <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/ww.png" alt="" />
-            <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/d.png" alt="" />
-            <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/oxxo.png" alt="" />
-            <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/dic.png" alt="" />
-            <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/jcb.png" alt="" />
-            <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/paypal.png" alt="" />
-            <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/oxxo.png" alt="" />
-      
+          <img
+            src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/money.png"
+            alt=""
+          />
+          <img
+            src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/m.png"
+            alt=""
+          />
+          <img
+            src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/rese.png"
+            alt=""
+          />
+          <img
+            src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/paypal.png"
+            alt=""
+          />
+          <img
+            src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/visa.png"
+            alt=""
+          />
+          <img
+            src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/ww.png"
+            alt=""
+          />
+          <img
+            src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/d.png"
+            alt=""
+          />
+          <img
+            src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/oxxo.png"
+            alt=""
+          />
+          <img
+            src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/dic.png"
+            alt=""
+          />
+          <img
+            src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/jcb.png"
+            alt=""
+          />
+          <img
+            src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/paypal.png"
+            alt=""
+          />
+          <img
+            src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/oxxo.png"
+            alt=""
+          />
         </div>
         <div className="flex ml-96 mt-2 companylogo">
-        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/bo.png" alt="" />
-            <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/postepay.png" alt="" />
-            <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/giropay.png" alt="" />
-            <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/sofort.png" alt="" />
-            <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/eps.png" alt="" />
-            <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/pago.png" alt="" />
-            <img src="https://uidesign.gbtcdn.com/GB/image/others/20190222_7819/m-Logo.png" alt="" />
-           
+          <img
+            src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/bo.png"
+            alt=""
+          />
+          <img
+            src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/postepay.png"
+            alt=""
+          />
+          <img
+            src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/giropay.png"
+            alt=""
+          />
+          <img
+            src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/sofort.png"
+            alt=""
+          />
+          <img
+            src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/eps.png"
+            alt=""
+          />
+          <img
+            src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/pago.png"
+            alt=""
+          />
+          <img
+            src="https://uidesign.gbtcdn.com/GB/image/others/20190222_7819/m-Logo.png"
+            alt=""
+          />
         </div>
       </div>
       <div className="w-full h-12 text-center mt-4 p-2  bg-black text-white">
